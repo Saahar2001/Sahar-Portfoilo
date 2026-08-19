@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Sahar monogram">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#7ce7ff"/>
+      <stop offset="0.42" stop-color="#7958ff"/>
+      <stop offset="1" stop-color="#0a0c26"/>
+    </radialGradient>
+  </defs>
+  <circle cx="90" cy="90" r="82" fill="url(#bg)" stroke="#d8c8ff" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M119 49 C96 32 62 42 61 65 C60 88 115 78 116 105 C117 130 82 143 57 126" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <path d="M29 126 C67 107 102 137 151 109" fill="none" stroke="#72e4ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="143" cy="50" r="4" fill="#fff" opacity=".9"/>
+  <circle cx="151" cy="64" r="2.5" fill="#bfa7ff"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 170" role="img" aria-labelledby="title desc">
+  <title id="title">Sahar custom wordmark</title>
+  <desc id="desc">A custom geometric SAHAR wordmark with a wave orbit line.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9c7ff"/>
+      <stop offset="0.45" stop-color="#8e68ff"/>
+      <stop offset="1" stop-color="#54cfff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- S -->
+    <path d="M76 38 C47 18 18 32 20 58 C22 83 78 72 82 102 C86 135 38 149 12 126"/>
+    <!-- A -->
+    <path d="M126 132 L164 35 L202 132 M143 91 H185"/>
+    <!-- H -->
+    <path d="M246 38 V132 M322 38 V132 M246 86 H322"/>
+    <!-- A -->
+    <path d="M366 132 L404 35 L442 132 M383 91 H425"/>
+    <!-- R -->
+    <path d="M486 132 V38 H530 C558 38 570 54 568 72 C566 91 550 99 526 99 H486 M526 99 L575 132"/>
+  </g>
+  <path d="M10 149 C150 115 246 159 358 137 C480 113 563 149 666 116" fill="none" stroke="#63e6ff" stroke-opacity="0.72" stroke-width="2.5"/>
+  <circle cx="621" cy="126" r="5" fill="#b99cff"/>
+  <circle cx="646" cy="118" r="3" fill="#63e6ff"/>
+</svg>
