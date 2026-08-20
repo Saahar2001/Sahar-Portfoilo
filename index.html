@@ -2,14 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Sahar Ismail Sultan — Information Systems graduate working across AI, research, software, data, and smart systems.">
-  <meta name="theme-color" content="#050716">
-  <meta name="color-scheme" content="dark">
-  <meta property="og:title" content="Sahar Sultan — AI × Software × Research">
-  <meta property="og:description" content="Selected work in AI, research, digital products, frontend development, and smart systems.">
-  <title>Sahar Sultan — AI × Software × Research</title>
-  <link rel="icon" href="assets/sahar-signal.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sahar Ismail Sultan — Information Systems graduate building AI-enabled, data-driven and user-centered digital products.">
+  <meta name="theme-color" content="#0b1f33">
+  <title>Sahar Sultan — Information Systems · AI · Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,354 +14,288 @@
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-  <canvas class="signal-field" id="signalField" aria-hidden="true"></canvas>
-  <div class="page-noise" aria-hidden="true"></div>
-  <div class="scroll-meter" id="scrollMeter" aria-hidden="true"><span></span></div>
 
-  <header class="topbar" id="topbar">
-    <a class="brand" href="#top" aria-label="Sahar Sultan home" data-aria-key="brandHome">
-      <img src="assets/sahar-signal.svg" alt="">
-      <span class="brand-name">SAHAR SULTAN</span>
-    </a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Sahar Sultan home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text">Sahar Sultan</span>
+      </a>
 
-    <nav class="desktop-nav" aria-label="Primary navigation" data-aria-key="mainNav">
-      <a href="#projects" data-i18n="navProjects">Work</a>
-      <a href="#capabilities" data-i18n="navCapabilities">Capabilities</a>
-      <a href="#experience" data-i18n="navExperience">Experience</a>
-      <a href="#proof" data-i18n="navProof">Proof</a>
-    </nav>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work" data-i18n="navWork">Work</a>
+        <a href="#experience" data-i18n="navExperience">Experience</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#awards" data-i18n="navAwards">Awards</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
 
-    <div class="topbar-actions">
-      <button class="language-button" id="languageButton" type="button" aria-label="Switch to Arabic">العربية</button>
-      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu" data-aria-key="openMenu">
-        <span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">العربية</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" data-aria-key="mobileNav" hidden>
-      <a href="#projects" data-i18n="navProjects">Work</a>
-      <a href="#capabilities" data-i18n="navCapabilities">Capabilities</a>
+    <nav class="mobile-nav" id="mobileNav" hidden>
+      <a href="#work" data-i18n="navWork">Work</a>
       <a href="#experience" data-i18n="navExperience">Experience</a>
-      <a href="#proof" data-i18n="navProof">Proof</a>
+      <a href="#skills" data-i18n="navSkills">Skills</a>
+      <a href="#awards" data-i18n="navAwards">Awards</a>
       <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-grid section-shell">
+    <section class="hero section-pad">
+      <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="hero-index"><span>00</span><span data-i18n="heroIndex">PORTFOLIO / 2026</span></p>
-          <p class="hero-overline" data-i18n="heroOverline">Information Systems · AI · Research · Digital Products</p>
-          <h1 class="hero-title" id="hero-title" aria-label="Sahar Sultan">
-            <span class="hero-name">SAHAR</span>
-            <span class="hero-surname">SULTAN</span>
+          <p class="eyebrow" data-i18n="heroEyebrow">INFORMATION SYSTEMS · AI · SOFTWARE · DATA</p>
+          <h1>
+            <span data-i18n="heroHi">Hi, I’m</span>
+            <strong>Sahar Sultan.</strong>
           </h1>
-          <p class="hero-lead" data-i18n="heroLead">I build and study intelligent digital systems — connecting AI, software, research, data, and human-centered product thinking.</p>
+          <p class="hero-lead" data-i18n="heroLead">I build intelligent digital products by connecting systems thinking, AI, software development, data, and user experience.</p>
+          <p class="hero-sub" data-i18n="heroSub">Information Systems graduate from Taibah University with First-Class Honors, based in Madinah, Saudi Arabia.</p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects"><span data-i18n="exploreWork">Explore selected work</span><span aria-hidden="true">↘</span></a>
-            <a class="button button-ghost" href="assets/Sahar_Ismail_Sultan_CV.pdf" download><span data-i18n="downloadCv">Download CV</span><span aria-hidden="true">↓</span></a>
+            <a class="btn btn-primary" href="#work"><span data-i18n="viewWork">View selected work</span><span aria-hidden="true">↘</span></a>
+            <a class="btn btn-secondary" href="assets/Sahar_Ismail_Sultan_CV.pdf" download><span data-i18n="downloadCv">Download CV</span><span aria-hidden="true">↓</span></a>
           </div>
-          <div class="hero-footnote">
-            <span data-i18n="heroLocation">Madinah, Saudi Arabia</span>
-            <span aria-hidden="true">/</span>
-            <span data-i18n="heroFocus">AI Engineering · Information Systems · Research</span>
-          </div>
-        </div>
 
-        <div class="hero-visual reveal" id="heroVisual" aria-hidden="true">
-          <div class="depth-label depth-label-a">SIGNAL / 01</div>
-          <div class="depth-label depth-label-b">DEPTH / 08</div>
-          <div class="beam"></div>
-          <div class="halo halo-a"></div>
-          <div class="halo halo-b"></div>
-          <div class="halo halo-c"></div>
-          <div class="signal-core"><span>S</span></div>
-          <svg class="hero-vector" viewBox="0 0 620 620" fill="none">
-            <path d="M40 404C133 322 188 454 278 349C369 244 397 137 578 190" />
-            <path d="M61 448C151 380 222 484 302 396C391 297 437 212 568 252" />
-            <path d="M83 492C176 438 246 511 333 442C407 384 470 310 554 319" />
-          </svg>
-          <div class="hero-coordinate">MADINAH / SAUDI ARABIA</div>
-        </div>
-      </div>
-      <div class="hero-marquee" aria-hidden="true">
-        <div>
-          <span>AI ENGINEERING</span><i>×</i><span>SOFTWARE</span><i>×</i><span>RESEARCH</span><i>×</i><span>INFORMATION SYSTEMS</span><i>×</i><span>SMART TECHNOLOGY</span><i>×</i>
-          <span>AI ENGINEERING</span><i>×</i><span>SOFTWARE</span><i>×</i><span>RESEARCH</span><i>×</i><span>INFORMATION SYSTEMS</span><i>×</i><span>SMART TECHNOLOGY</span><i>×</i>
-        </div>
-      </div>
-    </section>
-
-    <section class="now-strip section-shell" aria-labelledby="now-title">
-      <div class="now-title reveal">
-        <span class="eyebrow" id="now-title" data-i18n="nowTitle">CURRENT SIGNALS</span>
-        <span class="live-dot" aria-hidden="true"></span>
-      </div>
-      <div class="now-list">
-        <article class="now-item reveal"><span class="now-number">01</span><div><strong>Basiratk</strong><p data-i18n="nowBasiratk">Arabic legal speech-to-text model development.</p></div></article>
-        <article class="now-item reveal"><span class="now-number">02</span><div><strong>MIRAGE-MEM</strong><p data-i18n="nowMirage">Research on imagination inflation in memory-augmented AI agents.</p></div></article>
-        <article class="now-item reveal"><span class="now-number">03</span><div><strong>WAFD</strong><p data-i18n="nowWafd">Synthetic visitor twins for pre-launch service testing.</p></div></article>
-      </div>
-    </section>
-
-    <section class="about section-shell" id="about" aria-labelledby="about-title">
-      <header class="section-heading reveal">
-        <span class="section-no">01</span>
-        <span class="eyebrow" data-i18n="aboutLabel">ABOUT</span>
-      </header>
-      <div class="about-layout">
-        <h2 class="section-display reveal" id="about-title" data-i18n="aboutTitle">Systems thinking, translated into things people can actually use.</h2>
-        <div class="about-copy reveal">
-          <p data-i18n="aboutText">I am an Information Systems graduate who enjoys building and researching intelligent digital systems. I work comfortably between problem framing, AI and data, interface development, system analysis, testing, and connected technologies.</p>
-          <p class="about-note" data-i18n="aboutNote">The common thread is not a single tool. It is understanding the full system — people, information, software, devices, constraints, and delivery.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects" aria-labelledby="projects-title">
-      <div class="section-shell projects-intro">
-        <header class="section-heading reveal">
-          <span class="section-no">02</span>
-          <span class="eyebrow" data-i18n="projectsLabel">SELECTED WORK</span>
-        </header>
-        <div class="projects-intro-grid">
-          <h2 class="section-display reveal" id="projects-title" data-i18n="projectsTitle">Six projects. Six different problem spaces.</h2>
-          <p class="section-intro reveal" data-i18n="projectsIntro">Selected case studies across accessibility, AI-agent research, visitor experience, family support, smart monitoring, and secure communication.</p>
-        </div>
-      </div>
-
-      <article class="case case-raqeeb reveal" aria-labelledby="raq-title">
-        <div class="case-inner section-shell">
-          <div class="case-copy">
-            <div class="case-meta"><span>01 / RAQEEB</span><b data-i18n="raqAward">Best Graduation Project</b></div>
-            <h3 id="raq-title" data-i18n="raqTitle">Safety, independence, and intelligent assistance for older adults.</h3>
-            <p data-i18n="raqText">Raqeeb is a smart accessibility and elderly-safety system combining AI models, EEG signals, IoT devices, mobile applications, caregiver monitoring, fall detection, emotion recognition, emergency support, and lost-item assistance.</p>
-            <div class="case-stack" aria-label="Raqeeb technologies"><span>AI / ML</span><span>EEG</span><span>IoT</span><span>Flutter</span><span>Firebase</span><span>FastAPI</span></div>
-            <a class="text-link" href="https://youtu.be/xKBw1Zz2XBA?si=POylILyWUGQEKoeD" target="_blank" rel="noopener noreferrer"><span data-i18n="watchDemo">Watch demo</span><span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="raq-visual" aria-hidden="true">
-            <div class="raq-grid"></div>
-            <div class="vitals-head"><span>RAQEEB / ASSISTIVE SYSTEM</span><span class="status-ok">● ACTIVE</span></div>
-            <div class="human-signal"><span class="signal-head"></span><span class="signal-body"></span><i></i><i></i><i></i></div>
-            <div class="eeg-line"><svg viewBox="0 0 500 130" preserveAspectRatio="none"><path d="M0 67 L35 67 L52 31 L69 104 L88 65 L130 65 L151 49 L168 80 L186 64 L233 64 L252 12 L270 117 L290 65 L339 65 L356 45 L374 84 L392 66 L500 66"/></svg></div>
-            <div class="raq-modules"><span>FALL</span><span>EMOTION</span><span>EEG</span><span>CARE</span><span>OBJECT</span></div>
+          <div class="hero-meta" aria-label="Highlights">
+            <div><strong>4.82/5</strong><span data-i18n="gpa">GPA · First-Class Honors</span></div>
+            <div><strong>6+</strong><span data-i18n="projectsCount">featured projects</span></div>
+            <div><strong>2026</strong><span data-i18n="gradYear">Information Systems graduate</span></div>
           </div>
         </div>
-      </article>
 
-      <article class="case case-mirage reveal" aria-labelledby="mirage-title">
-        <div class="case-inner section-shell mirage-layout">
-          <div class="mirage-visual" aria-hidden="true">
-            <div class="memory-field">
-              <div class="memory-center"><span>MEM</span><small>TRACE</small></div>
-              <span class="memory-point p1">OBSERVED</span>
-              <span class="memory-point p2">IMAGINED</span>
-              <span class="memory-point p3">SOURCE</span>
-              <span class="memory-point p4">RECALL</span>
-              <span class="memory-point p5">DECISION</span>
-              <svg viewBox="0 0 600 600"><circle cx="300" cy="300" r="196"/><circle cx="300" cy="300" r="134"/><path d="M96 332 C163 118 408 97 509 281 C430 463 192 513 96 332Z"/><path d="M126 205 C289 258 344 151 491 207"/></svg>
+        <div class="hero-panel reveal" aria-label="Professional profile summary">
+          <div class="hero-panel-top">
+            <span class="status-dot"></span>
+            <span data-i18n="available">Open to opportunities in Madinah</span>
+          </div>
+
+          <div class="focus-stack">
+            <div class="focus-card focus-card-a">
+              <span>01</span>
+              <div><small data-i18n="focusLabel">FOCUS</small><strong>AI & Intelligent Systems</strong></div>
+            </div>
+            <div class="focus-card focus-card-b">
+              <span>02</span>
+              <div><small data-i18n="focusLabel">FOCUS</small><strong>Web & Mobile Products</strong></div>
+            </div>
+            <div class="focus-card focus-card-c">
+              <span>03</span>
+              <div><small data-i18n="focusLabel">FOCUS</small><strong>Data & System Analysis</strong></div>
             </div>
           </div>
-          <div class="case-copy">
-            <div class="case-meta"><span>02 / MIRAGE-MEM</span><b data-i18n="mirageMeta">AI Research · King Khalid University</b></div>
-            <h3 id="mirage-title" data-i18n="mirageTitle">Can an AI agent remember an event that only happened in its imagination?</h3>
-            <p data-i18n="mirageText">A research project studying artificial imagination inflation in memory-augmented AI agents through repeated counterfactual simulation and controlled experimental episodes.</p>
-            <dl class="research-stats">
-              <div><dt>1,536</dt><dd data-i18n="baseScenarios">base scenarios</dd></div>
-              <div><dt>10,752</dt><dd data-i18n="episodes">experimental episodes</dd></div>
-              <div><dt>7</dt><dd data-i18n="repetitionLevels">repetition levels</dd></div>
-            </dl>
-            <div class="case-stack"><span>AI Agents</span><span>Persistent Memory</span><span>Python</span><span>Evaluation</span></div>
-          </div>
-        </div>
-      </article>
 
-      <article class="case case-wafd reveal" aria-labelledby="wafd-title">
-        <div class="wafd-media">
-          <img src="assets/wafd.webp" alt="WAFD project visual" data-alt-key="wafdAlt" loading="lazy" decoding="async">
-          <div class="wafd-overlay" aria-hidden="true"><span>SIMULATION LAYER</span><span>VISITOR 024</span><span>FRICTION / DETECTED</span></div>
-        </div>
-        <div class="case-inner section-shell wafd-copy-wrap">
-          <div class="case-copy">
-            <div class="case-meta"><span>03 / WAFD</span><b data-i18n="wafdMeta">Synthetic visitor twin</b></div>
-            <h3 id="wafd-title" data-i18n="wafdTitle">Test the visitor experience before real visitors have to.</h3>
-            <p data-i18n="wafdText">WAFD simulates diverse virtual visitors across digital and physical service journeys, exposing where language, accessibility, connectivity, digital skill, or service design can cause the experience to fail.</p>
-            <div class="case-stack"><span>AI Agents</span><span>Simulation</span><span>Digital Twin</span><span>Service Design</span></div>
+          <div class="hero-panel-foot">
+            <span data-i18n="fromProblem">From problem framing</span>
+            <span aria-hidden="true">→</span>
+            <span data-i18n="toDelivery">to tested delivery</span>
           </div>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="case case-tibyan reveal" aria-labelledby="tibyan-title">
-        <div class="case-inner section-shell tibyan-layout">
-          <div class="case-copy">
-            <div class="case-meta"><span>04 / TIBYAN</span><b data-i18n="secondPlace">2nd Place</b></div>
-            <h3 id="tibyan-title" data-i18n="tibyanTitle">An Arabic support environment for families navigating ADHD.</h3>
-            <p data-i18n="tibyanText">Tibyan supports families of children with ADHD through AI-assisted guidance, child follow-up, task organization, educational content, community support, and structured family tools.</p>
-            <div class="case-stack"><span>AI Assistance</span><span>Arabic UX</span><span>Product Design</span><span>Family Support</span></div>
-          </div>
-          <figure class="tibyan-frame">
-            <img src="assets/tibyan.webp" alt="Tibyan Arabic platform presentation" data-alt-key="tibyanAlt" loading="lazy" decoding="async">
-            <figcaption>TIBYAN / ARABIC DIGITAL PRODUCT</figcaption>
+    <section class="intro-strip">
+      <div class="container intro-strip-grid">
+        <p class="reveal" data-i18n="introStatement">I work across the full digital-product lifecycle: understanding the problem, designing the system, building the interface, integrating data and AI, testing quality, and communicating the result clearly.</p>
+        <div class="intro-tags reveal" aria-label="Core domains">
+          <span>AI / ML</span><span>Frontend</span><span>Mobile</span><span>Data</span><span>IoT</span><span>QA</span><span>Research</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">01</span><p class="eyebrow" data-i18n="selectedWork">SELECTED WORK</p></div>
+          <h2 data-i18n="workTitle">Projects built around real users, real constraints, and measurable outcomes.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-feature reveal">
+            <div class="project-feature-copy">
+              <div class="project-topline">
+                <span class="project-index">01</span>
+                <span class="badge" data-i18n="bestGrad">Best Graduation Project</span>
+              </div>
+              <p class="project-type">AI · IoT · Accessibility · Mobile</p>
+              <h3>RAQEEB</h3>
+              <p data-i18n="raqText">A smart elderly-accessibility and safety platform integrating AI models, EEG signals, IoT devices, mobile applications, caregiver monitoring, fall detection, emotion recognition, emergency support, and lost-item assistance.</p>
+              <div class="tech-list"><span>Flutter</span><span>Firebase</span><span>FastAPI</span><span>EEG</span><span>Raspberry Pi</span><span>AI/ML</span></div>
+              <a class="project-link" href="https://youtu.be/xKBw1Zz2XBA?si=POylILyWUGQEKoeD" target="_blank" rel="noopener noreferrer"><span data-i18n="watchDemo">Watch demo</span><span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="project-feature-visual" aria-hidden="true">
+              <div class="dashboard-mini">
+                <div class="dash-head"><span>RAQEEB</span><i></i></div>
+                <div class="dash-grid">
+                  <div class="metric"><small>SAFETY</small><strong>ACTIVE</strong></div>
+                  <div class="metric"><small>EEG</small><strong>LIVE</strong></div>
+                  <div class="metric wide"><small>ASSISTIVE MODULES</small><div class="bars"><span></span><span></span><span></span><span></span><span></span></div></div>
+                </div>
+                <div class="dash-footer"><span>Fall</span><span>Emotion</span><span>Care</span><span>Objects</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-image-card reveal">
+            <div class="project-image"><img src="assets/wafd.webp" alt="WAFD project presentation visual" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-index">02</span><span class="badge badge-soft" data-i18n="hackathonConcept">Hackathon Concept</span></div>
+              <p class="project-type">AI Agents · Simulation · Service Design</p>
+              <h3>WAFD</h3>
+              <p data-i18n="wafdText">A synthetic visitor-twin platform that tests digital and physical service journeys before launch using diverse virtual visitors with different languages, accessibility needs, connectivity levels, and digital skills.</p>
+            </div>
+          </article>
+
+          <article class="project-card project-research reveal">
+            <div class="project-topline"><span class="project-index">03</span><span class="badge badge-soft" data-i18n="summerFellowship">Summer Fellowship Research</span></div>
+            <p class="project-type">AI Agents · Memory · Experimental Research</p>
+            <h3>MIRAGE-MEM</h3>
+            <p data-i18n="mirageText">A controlled research project studying whether repeated counterfactual imagination can distort memory and source attribution in memory-augmented AI agents.</p>
+            <div class="research-numbers">
+              <div><strong>1,536</strong><span data-i18n="baseScenarios">base scenarios</span></div>
+              <div><strong>10,752</strong><span data-i18n="episodes">experimental episodes</span></div>
+              <div><strong>7</strong><span data-i18n="levels">repetition levels</span></div>
+            </div>
+            <div class="memory-path" aria-hidden="true"><span>Observed</span><i></i><span>Imagined</span><i></i><span>Recall</span></div>
+          </article>
+
+          <article class="project-card project-image-card reveal">
+            <div class="project-image project-image-portrait"><img src="assets/tibyan.webp" alt="TIBYAN project flow and interface visual" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-index">04</span><span class="badge" data-i18n="secondPlace">2nd Place</span></div>
+              <p class="project-type">Arabic Product · AI Support · Family Tech</p>
+              <h3>TIBYAN</h3>
+              <p data-i18n="tibyanText">An Arabic digital support environment for mothers that combines guided assessment, trusted AI assistance, daily follow-up, practical strategies, and structured reports.</p>
+            </div>
+          </article>
+
+          <article class="project-card project-simple reveal">
+            <div class="project-topline"><span class="project-index">05</span><span class="badge" data-i18n="secondPlaceTrack">2nd Place · Smart Monitoring</span></div>
+            <p class="project-type">Smart Cities · AI · Operations</p>
+            <h3>ZEMAM</h3>
+            <p data-i18n="zemamText">An AI-powered facility-management platform for smart cities using GPS-based task zoning, photo verification, dashboards, and automated task-status updates to improve operational accountability.</p>
+            <div class="tech-list"><span>AI</span><span>GPS</span><span>Dashboards</span><span>Workflow</span></div>
+          </article>
+
+          <article class="project-card project-simple reveal">
+            <div class="project-topline"><span class="project-index">06</span><span class="badge badge-soft" data-i18n="securePlatform">Secure Platform</span></div>
+            <p class="project-type">Security · Blockchain · Digital Identity</p>
+            <h3>MERSAL</h3>
+            <p data-i18n="mersalText">A confidential digital correspondence platform using AI, blockchain, encryption, and digital signatures to strengthen privacy, integrity, and authenticity in communication.</p>
+            <div class="tech-list"><span>Encryption</span><span>Blockchain</span><span>AI</span><span>Digital Signatures</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-muted" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">02</span><p class="eyebrow" data-i18n="experienceLabel">EXPERIENCE</p></div>
+          <h2 data-i18n="experienceTitle">Experience that connects product thinking with implementation.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-main"><h3 data-i18n="thinksyncTitle">Frontend & Mobile Development Trainee · ThinkSync</h3><p data-i18n="thinksyncText">Worked on the Draia enterprise platform across Next.js frontend architecture, Arabic RTL behavior, authentication interfaces, validation, shared UI components, Flutter mobile flows, testing, Git branches, pull requests, and implementation from Figma.</p><div class="tech-list"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Flutter</span><span>GitHub</span></div></div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-main"><h3 data-i18n="fellowshipTitle">Summer Fellow · King Khalid University</h3><p data-i18n="fellowshipText">Working on MIRAGE-MEM, a controlled study of imagination inflation, memory source attribution, and reliability in memory-augmented AI agents.</p><div class="tech-list"><span>Research Design</span><span>AI Agents</span><span>Python</span><span>Evaluation</span></div></div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-main"><h3 data-i18n="trainerTitle">Programming & AI Trainer · Summer Program</h3><p data-i18n="trainerText">Designed and delivered practical web-development and AI activities for learners, combining HTML/CSS fundamentals, project building, entrepreneurship, and responsible use of AI tools.</p><div class="tech-list"><span>HTML/CSS</span><span>AI Tools</span><span>Project Coaching</span><span>Training</span></div></div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-main"><h3 data-i18n="hashTitle">Public Relations Committee Lead · Hash Plus Club</h3><p data-i18n="hashText">Led external communication workflows, templates, partnerships, guest coordination, member processes, points and badges, and operational documentation for a technology community.</p><div class="tech-list"><span>Leadership</span><span>Partnerships</span><span>Operations</span><span>Communication</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="skills">
+      <div class="container skills-layout">
+        <div class="section-head section-head-side reveal">
+          <div><span class="section-kicker">03</span><p class="eyebrow" data-i18n="skillsLabel">CAPABILITIES</p></div>
+          <h2 data-i18n="skillsTitle">A broad stack, organized around solving the system—not collecting tools.</h2>
+          <p data-i18n="skillsIntro">My strongest work happens where technical implementation, analysis, user needs, and product quality meet.</p>
+        </div>
+
+        <div class="skills-groups">
+          <article class="skill-group reveal"><h3 data-i18n="skillSoftware">Software & Interfaces</h3><div><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML/CSS</span><span>Flutter</span><span>Dart</span><span>Tailwind CSS</span></div></article>
+          <article class="skill-group reveal"><h3 data-i18n="skillAi">AI, Data & APIs</h3><div><span>Python</span><span>AI/ML</span><span>Data Analysis</span><span>SQL</span><span>Power BI</span><span>FastAPI</span><span>REST APIs</span><span>Model Evaluation</span></div></article>
+          <article class="skill-group reveal"><h3 data-i18n="skillSystems">Systems & Connected Tech</h3><div><span>Firebase</span><span>IoT</span><span>Raspberry Pi</span><span>Arduino</span><span>EEG Signals</span><span>Cloud</span><span>Git/GitHub</span><span>QA</span></div></article>
+          <article class="skill-group reveal"><h3 data-i18n="skillProduct">Product & Research</h3><div><span>Systems Analysis</span><span>Requirements</span><span>Figma</span><span>RTL UX</span><span>Research Design</span><span>Documentation</span><span>Testing</span><span>Project Leadership</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad awards-section" id="awards">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">04</span><p class="eyebrow" data-i18n="awardsLabel">AWARDS & PROOF</p></div>
+          <h2 data-i18n="awardsTitle">Recognition backed by delivered work.</h2>
+        </div>
+
+        <div class="awards-grid">
+          <article class="award-card award-main reveal">
+            <div class="award-number">01</div>
+            <div><p class="award-org">Taibah University · 2026</p><h3 data-i18n="awardRaqeeb">Best Graduation Project — Information Systems Department</h3><p data-i18n="awardRaqeebText">Recognition for RAQEEB, the graduation project focused on intelligent accessibility and elderly safety.</p></div>
+          </article>
+
+          <figure class="proof-card reveal">
+            <img src="assets/second-place.jpg" alt="Second place award trophy" loading="lazy" decoding="async">
+            <figcaption><strong data-i18n="awardSecond">2nd Place</strong><span data-i18n="awardSecondText">Smart monitoring / innovation competition recognition.</span></figcaption>
           </figure>
-        </div>
-      </article>
 
-      <div class="section-shell twin-cases">
-        <article class="mini-case mini-zemam reveal" aria-labelledby="zemam-title">
-          <div class="mini-case-number">05</div>
-          <div class="mini-case-visual" aria-hidden="true">
-            <div class="radar"><span></span><i></i><i></i><i></i><b></b></div>
-            <div class="radar-labels"><span>ZONE</span><span>VERIFY</span><span>TASK</span></div>
-          </div>
-          <div class="mini-case-copy">
-            <div class="case-meta"><span>ZEMAM</span><b data-i18n="zemamAward">2nd Place · Smart Monitoring Track</b></div>
-            <h3 id="zemam-title" data-i18n="zemamTitle">AI-powered smart facility monitoring.</h3>
-            <p data-i18n="zemamText">A smart monitoring concept for facility operations using location-aware tasks, visual verification, dashboards, and automated task-state updates.</p>
-          </div>
-        </article>
+          <figure class="proof-card reveal">
+            <img src="assets/ai-trainer.jpg" alt="AI and web development training visual" loading="lazy" decoding="async">
+            <figcaption><strong data-i18n="trainingProof">Training & Mentoring</strong><span data-i18n="trainingProofText">Practical AI and web-development learning activities designed for students.</span></figcaption>
+          </figure>
 
-        <article class="mini-case mini-mersal reveal" aria-labelledby="mersal-title">
-          <div class="mini-case-number">06</div>
-          <div class="mini-case-copy">
-            <div class="case-meta"><span>MERSAL</span><b data-i18n="mersalMeta">Secure correspondence</b></div>
-            <h3 id="mersal-title" data-i18n="mersalTitle">Confidential digital correspondence with verifiable trust.</h3>
-            <p data-i18n="mersalText">A secure correspondence concept combining AI, blockchain, encryption, digital signatures, privacy, and traceability for sensitive digital communication.</p>
-          </div>
-          <div class="chain-visual" aria-hidden="true">
-            <span class="chain-node n1">01</span><span class="chain-node n2">02</span><span class="chain-node n3">03</span><span class="chain-node n4">04</span>
-            <i class="chain-line l1"></i><i class="chain-line l2"></i><i class="chain-line l3"></i>
-            <div class="lock-core">◆</div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="capabilities section-shell" id="capabilities" aria-labelledby="capabilities-title">
-      <header class="section-heading reveal">
-        <span class="section-no">03</span>
-        <span class="eyebrow" data-i18n="capabilitiesLabel">CAPABILITY SYSTEM</span>
-      </header>
-      <div class="capabilities-intro">
-        <h2 class="section-display reveal" id="capabilities-title" data-i18n="capabilitiesTitle">Not a list of tools. A connected way of working.</h2>
-        <p class="section-intro reveal" data-i18n="capabilitiesIntro">Select a capability area to see the technologies and practices I use in context.</p>
-      </div>
-      <div class="capability-system reveal" id="capabilitySystem">
-        <div class="capability-tabs" role="tablist" aria-label="Capability areas" data-aria-key="capabilityTabs">
-          <button role="tab" aria-selected="true" aria-controls="capabilityPanel" data-capability="ai"><span>01</span><b data-i18n="capAi">AI & Data</b></button>
-          <button role="tab" aria-selected="false" aria-controls="capabilityPanel" data-capability="frontend"><span>02</span><b data-i18n="capFrontend">Frontend & Product</b></button>
-          <button role="tab" aria-selected="false" aria-controls="capabilityPanel" data-capability="systems"><span>03</span><b data-i18n="capSystems">Systems & QA</b></button>
-          <button role="tab" aria-selected="false" aria-controls="capabilityPanel" data-capability="backend"><span>04</span><b data-i18n="capBackend">Backend & APIs</b></button>
-          <button role="tab" aria-selected="false" aria-controls="capabilityPanel" data-capability="iot"><span>05</span><b data-i18n="capIot">IoT & Smart Systems</b></button>
-          <button role="tab" aria-selected="false" aria-controls="capabilityPanel" data-capability="research"><span>06</span><b data-i18n="capResearch">Research & IS</b></button>
-        </div>
-        <div class="capability-panel" id="capabilityPanel" role="tabpanel" tabindex="0" aria-live="polite">
-          <div class="panel-orbit" aria-hidden="true"><i></i><i></i><i></i><span>AI</span></div>
-          <div class="panel-content">
-            <span class="eyebrow" id="capabilityKicker">AI + DATA</span>
-            <h3 id="capabilityName">AI & Data</h3>
-            <p id="capabilityDescription">Building, evaluating, and integrating intelligent features with attention to data quality and real system constraints.</p>
-            <div class="panel-tags" id="capabilityTags"></div>
-            <p class="panel-context" id="capabilityContext"></p>
-          </div>
+          <article class="award-card reveal">
+            <div class="award-number">02</div>
+            <div><p class="award-org">Bachelor’s Degree</p><h3 data-i18n="firstHonors">First-Class Honors · GPA 4.82/5.00</h3><p data-i18n="firstHonorsText">Bachelor of Science in Information Systems, Taibah University.</p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="experience section-shell" id="experience" aria-labelledby="experience-title">
-      <header class="section-heading reveal">
-        <span class="section-no">04</span>
-        <span class="eyebrow" data-i18n="experienceLabel">EXPERIENCE</span>
-      </header>
-      <div class="experience-head">
-        <h2 class="section-display reveal" id="experience-title" data-i18n="experienceTitle">Research, software delivery, teaching, and leadership.</h2>
-      </div>
-      <div class="timeline">
-        <details class="timeline-item reveal" open>
-          <summary><span class="timeline-date">2026 / <span data-i18n="current">CURRENT</span></span><h3 data-i18n="basiratkRole">AI Model Development · Basiratk</h3><span class="timeline-toggle" aria-hidden="true">+</span></summary>
-          <div class="timeline-body"><p data-i18n="basiratkExperience">Developing an Arabic legal speech-to-text model through dataset preparation, cleaning, legal terminology coverage, output evaluation, testing, and integration support.</p><div class="timeline-tags"><span>Arabic STT</span><span>AI Models</span><span>Dataset QA</span><span>Evaluation</span></div></div>
-        </details>
-        <details class="timeline-item reveal">
-          <summary><span class="timeline-date">SUMMER 2026</span><h3 data-i18n="fellowshipRole">AI Summer Research Fellow · King Khalid University</h3><span class="timeline-toggle" aria-hidden="true">+</span></summary>
-          <div class="timeline-body"><p data-i18n="fellowshipExperience">Working on MIRAGE-MEM, a controlled study of imagination inflation, memory source attribution, and reliability in memory-augmented AI agents.</p><div class="timeline-tags"><span>AI Agents</span><span>Research Design</span><span>Evaluation</span><span>Python</span></div></div>
-        </details>
-        <details class="timeline-item reveal">
-          <summary><span class="timeline-date">SUMMER 2026</span><h3 data-i18n="trainerRole">Part-time AI & Web Trainer · Taibah Summer Program</h3><span class="timeline-toggle" aria-hidden="true">+</span></summary>
-          <div class="timeline-body"><p data-i18n="trainerExperience">Trained approximately 38 students from different age groups in AI tools, web fundamentals, project ideation, prototyping, mentoring, and technical presentation.</p><div class="timeline-tags"><span>Teaching</span><span>AI Education</span><span>Web Fundamentals</span><span>Mentoring</span></div></div>
-        </details>
-        <details class="timeline-item reveal">
-          <summary><span class="timeline-date">JUN–AUG 2026</span><h3 data-i18n="thinksyncRole">Software Development Trainee · ThinkSync</h3><span class="timeline-toggle" aria-hidden="true">+</span></summary>
-          <div class="timeline-body"><p data-i18n="thinksyncExperience">Worked across frontend, mobile, UI/UX, systems analysis, QA, API integration, and team delivery using Git/GitHub workflows and production-oriented development practices.</p><div class="timeline-tags"><span>Next.js</span><span>TypeScript</span><span>Flutter</span><span>Git/GitHub</span><span>QA</span><span>API Integration</span></div></div>
-        </details>
-        <details class="timeline-item reveal">
-          <summary><span class="timeline-date">JUL–AUG 2026</span><h3 data-i18n="hashRole">Public Relations Committee Leader · Hash Plus Club</h3><span class="timeline-toggle" aria-hidden="true">+</span></summary>
-          <div class="timeline-body"><p data-i18n="hashExperience">Led committee communication, coordination, task follow-up, documentation, member engagement, and recognition activities.</p><div class="timeline-tags"><span>Leadership</span><span>Coordination</span><span>Communication</span><span>Documentation</span></div></div>
-        </details>
-      </div>
-    </section>
-
-    <section class="proof" id="proof" aria-labelledby="proof-title">
-      <div class="section-shell">
-        <header class="section-heading reveal">
-          <span class="section-no">05</span>
-          <span class="eyebrow" data-i18n="proofLabel">PROOF / MOMENTS</span>
-        </header>
-        <div class="proof-head">
-          <h2 class="section-display reveal" id="proof-title" data-i18n="proofTitle">Recognition matters most when it reflects real work.</h2>
-          <div class="award-index reveal" aria-label="Selected achievements" data-aria-key="awardsLabel">
-            <div><span>01</span><p><strong data-i18n="awardRaqeeb">Best Graduation Project</strong><small>RAQEEB · 2026</small></p></div>
-            <div><span>02</span><p><strong data-i18n="awardZemam">2nd Place · Smart Monitoring Track</strong><small>ZEMAM</small></p></div>
-            <div><span>03</span><p><strong data-i18n="awardTibyan">2nd Place</strong><small>TIBYAN</small></p></div>
-          </div>
+    <section class="contact-section section-pad" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow" data-i18n="contactLabel">CONTACT</p>
+          <h2 data-i18n="contactTitle">Looking for someone who can understand the system and build the product?</h2>
+          <p data-i18n="contactText">I’m interested in Information Systems, AI, data, software, QA, digital transformation, and product roles in Madinah.</p>
         </div>
-      </div>
-
-      <div class="proof-gallery section-shell">
-        <figure class="proof-shot proof-shot-award reveal">
-          <img src="assets/second-place.jpg" alt="Second-place recognition" data-alt-key="awardImageAlt" loading="lazy" decoding="async">
-          <figcaption><span>RECOGNITION</span><strong data-i18n="proofRecognition">Second-place recognition · 2026</strong></figcaption>
-        </figure>
-        <figure class="proof-shot proof-shot-training reveal">
-          <img src="assets/ai-trainer.jpg" alt="AI training program evidence" data-alt-key="trainerImageAlt" loading="lazy" decoding="async">
-          <figcaption><span>TEACHING</span><strong data-i18n="proofTraining">AI & web training · ~38 students</strong></figcaption>
-        </figure>
-        <div class="proof-shot proof-shot-leadership proof-note reveal">
-          <div class="proof-note-mark" aria-hidden="true"><span>PR</span><i>+</i></div>
-          <div class="proof-note-copy">
-            <span class="proof-note-kicker">HASH PLUS / 2026</span>
-            <p data-i18n="hashExperience">Led communication, coordination, task follow-up, documentation, member engagement, and recognition activities within the committee.</p>
-          </div>
-          <div class="proof-note-role"><span>LEADERSHIP</span><strong data-i18n="proofLeadership">Public Relations Committee Leader · Hash Plus</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
-      <header class="section-heading reveal">
-        <span class="section-no">06</span>
-        <span class="eyebrow" data-i18n="contactLabel">CONTACT</span>
-      </header>
-      <div class="contact-layout reveal">
-        <div>
-          <p class="contact-pre" data-i18n="contactPre">For roles, research, collaborations, and thoughtful technical work.</p>
-          <h2 id="contact-title"><span data-i18n="contactLine1">LET’S CONNECT</span><em data-i18n="contactLine2">where systems meet people.</em></h2>
-        </div>
-        <div class="contact-actions">
-          <a class="contact-email" href="mailto:saharismail2001@gmail.com">saharismail2001@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="contact-actions reveal">
+          <a class="email-link" href="mailto:saharismail2001@gmail.com">saharismail2001@gmail.com <span aria-hidden="true">↗</span></a>
           <div class="social-links">
             <a href="https://github.com/Saahar2001" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://x.com/saharitshk" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a>
+            <a href="https://x.com/saharitshk" target="_blank" rel="noopener noreferrer">X ↗</a>
             <a href="https://wa.me/966557915079" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
           </div>
+          <a class="btn btn-light" href="assets/Sahar_Ismail_Sultan_CV.pdf" download><span data-i18n="downloadCv">Download CV</span><span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer section-shell">
-    <div class="footer-brand"><img src="assets/sahar-signal.svg" alt=""><span>SAHAR SULTAN</span></div>
-    <p>© <span id="year">2026</span> Sahar Ismail Sultan.</p>
-    <a href="#top" data-i18n="backTop">Back to top ↑</a>
+  <footer class="site-footer">
+    <div class="container footer-grid"><p>© <span id="year">2026</span> Sahar Ismail Sultan.</p><p data-i18n="footer">Designed and built as a static GitHub Pages portfolio.</p></div>
   </footer>
 
   <script src="script.js"></script>
