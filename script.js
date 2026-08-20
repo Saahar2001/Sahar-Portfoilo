@@ -1,103 +1,37 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.querySelector('.cursor');
-    const follower = document.querySelector('.cursor-follower');
-    const langSwitch = document.getElementById('lang-switch');
-    const mainContent = document.getElementById('main-content');
-    
-    // Custom Cursor
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
-
-    // Language Switching Logic
-    let currentLang = 'en';
-    langSwitch.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'ar' : 'en';
-        document.documentElement.lang = currentLang;
-        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-        langSwitch.textContent = currentLang === 'en' ? 'AR' : 'EN';
-        
-        document.querySelectorAll('.reveal-text').forEach(el => {
-            const text = el.getAttribute(`data-${currentLang}`);
-            el.textContent = text;
-        });
-    });
-
-    // Scroll Reveal Animation
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-        observerOptions;
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal-text').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Particle Background Animation
-    const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    
-    let particles = [];
-    const particleCount = 60;
-
-    function initCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedX = (Math.random() - 0.5) * 0.5;
-            this.speedY = (Math.random() - 0.5) * 0.5;
-            this.opacity = Math.random() * 0.5 + 0.2;
-        }
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            if (this.x > canvas.width) this.x = 0;
-            if (this.x < 0) this.x = canvas.width;
-            if (this.y > canvas.height) this.y = 0;
-            if (this.y < 0) this.y = canvas.height;
-        }
-        draw() {
-            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => p.update());
-        particles.forEach(p => p.draw());
-        requestAnimationFrame(animate);
-    }
-
-    window.addEventListener('resize', () => {
-        initCanvas();
-        particles = [];
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
-    });
-
-    initCanvas();
-    for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-    }
-    animate();
-});
+const translations={en:{nav_about:'About',nav_work:'Work',nav_experience:'Experience',nav_skills:'Capabilities',nav_contact:'Contact',hero_eyebrow:'Information Systems · AI · Research',hero_intro:'I build and study intelligent digital systems — from AI models and memory agents to web products, IoT and human-centered technology.',hero_location:'Madinah, Saudi Arabia',scroll_enter:'Enter portfolio',about_kicker:'Profile',about_title:'I like systems that think, adapt and actually help people.',about_body:'I am an Information Systems graduate from Taibah University. My work moves between AI, research, software development, data and smart systems, with a focus on turning technical ideas into useful products and experiments.',fact_gpa:'GPA · First Honor',fact_focus:'Research and product focus',fact_languages:'Languages',work_kicker:'Selected work',work_title:'Projects built as systems, not just screens.',work_intro:'A selection of research, AI, accessibility, smart-city and digital-product work.',raqeeb_label:'Graduation Project · Best Project 2026',raqeeb_desc:'A smart accessibility platform for elderly safety and independence, connecting AI, IoT, EEG, caregiver monitoring, emergency response and mobile services in one system.',watch_demo:'Watch demo ↗',raqeeb_status:'Care overview',raqeeb_metric1:'Safety',raqeeb_metric2:'Caregiver',raqeeb_metric3:'Alerts',raqeeb_metric4:'Location',mirage_label:'AI Research · King Khalid University Fellowship',mirage_desc:'A controlled benchmark investigating whether repeated counterfactual simulation can make memory-augmented AI agents recall imagined events as if they were real experience.',mirage_stat1:'base scenarios',mirage_stat2:'experimental episodes',mirage_stat3:'repetition levels',wafd_label:'AI Simulation · Madinah Hackathon 2026',wafd_desc:'A synthetic twin for visitor experience testing. Virtual visitors with different languages, abilities, connectivity and digital skills simulate service journeys before launch to reveal friction and failure points.',wafd_caption:'Visitor journey simulation',tibyan_label:'Digital Product · 2nd Place',tibyan_desc:'An Arabic platform supporting families of children with ADHD through structured follow-up, educational content, smart assistance, task organization and access to specialists.',tibyan_caption:'Arabic family support platform',more_work:'More work',more_work_title:'Security, monitoring and applied systems.',zemam_label:'Smart Monitoring · 2nd Place',zemam_desc:'AI-powered facility management for smart cities using GPS-based task zones, photo verification, dashboards and automated task-status updates.',mersal_label:'Secure Digital Correspondence',mersal_desc:'A confidential correspondence concept combining AI, blockchain, encryption and digital signatures to improve privacy, authenticity and traceability.',experience_kicker:'Experience',experience_title:'Work, research, teaching and leadership.',current:'Current',exp_basiratk_title:'AI Model Development · Basiratk',exp_basiratk_desc:'Working on Arabic legal speech-to-text and AI model tasks, including dataset preparation, model comparison, testing and evaluation.',exp_fellowship_title:'AI Summer Research Fellowship · King Khalid University',exp_fellowship_desc:'Researching memory reliability in AI agents through the MIRAGE-MEM benchmark and controlled experimental design.',exp_trainer_title:'AI & Web Trainer · Taibah Summer Program',exp_trainer_desc:'Trained around 38 students from different age groups in AI concepts and web fundamentals through practical activities and projects.',exp_thinksync_title:'Software Development Trainee · ThinkSync',exp_thinksync_desc:'Worked across UI/UX, system analysis, Next.js frontend development, Flutter, QA, GitHub workflows, API testing and local integration environments.',exp_hash_title:'Public Relations Committee Leader · Hash Plus Club',exp_hash_desc:'Led public relations activities, coordination and communication for the club, supporting organized team delivery and member engagement.',skills_kicker:'Capabilities',skills_title:'A connected stack built around Information Systems.',proof_kicker:'Proof & moments',proof_title:'Recognition, teaching and leadership in real spaces.',proof_award:'2nd Place · Digital Innovation & Summer AI Program',proof_award_box:'Recognition moment · 2026',proof_training:'AI & Web Trainer · Taibah Summer Program',proof_hash:'Public Relations Committee Leader · Hash Plus Club',contact_kicker:'Contact',contact_title:"LET'S BUILD<br>SOMETHING USEFUL.",contact_body:'Open to AI, software, research and digital-product opportunities.',back_top:'Back to top ↑'},ar:{nav_about:'عنّي',nav_work:'المشاريع',nav_experience:'الخبرات',nav_skills:'المهارات',nav_contact:'تواصل',hero_eyebrow:'نظم المعلومات · الذكاء الاصطناعي · البحث',hero_intro:'أبني وأدرس أنظمة رقمية ذكية؛ من نماذج الذكاء الاصطناعي ووكلاء الذاكرة إلى منتجات الويب وإنترنت الأشياء والتقنيات المتمحورة حول الإنسان.',hero_location:'المدينة المنورة، السعودية',scroll_enter:'استكشف أعمالي',about_kicker:'نبذة',about_title:'أحب الأنظمة التي تفكر وتتكيّف وتقدّم فائدة حقيقية للناس.',about_body:'خريجة نظم معلومات من جامعة طيبة. يجمع عملي بين الذكاء الاصطناعي والبحث وتطوير البرمجيات والبيانات والأنظمة الذكية، مع تركيز على تحويل الأفكار التقنية إلى منتجات وتجارب عملية.',fact_gpa:'المعدل · مرتبة الشرف الأولى',fact_focus:'تركيز بحثي ومنتجات رقمية',fact_languages:'اللغات',work_kicker:'أعمال مختارة',work_title:'مشاريع بُنيت كأنظمة متكاملة، وليس مجرد واجهات.',work_intro:'مجموعة من الأعمال في البحث والذكاء الاصطناعي وإمكانية الوصول والمدن الذكية والمنتجات الرقمية.',raqeeb_label:'مشروع التخرج · أفضل مشروع 2026',raqeeb_desc:'منصة ذكية لدعم سلامة واستقلالية كبار السن، تجمع بين الذكاء الاصطناعي وإنترنت الأشياء وإشارات EEG ومتابعة مقدم الرعاية والاستجابة للطوارئ وخدمات التطبيق المحمول.',watch_demo:'مشاهدة العرض ↗',raqeeb_status:'نظرة عامة على الرعاية',raqeeb_metric1:'السلامة',raqeeb_metric2:'مقدم الرعاية',raqeeb_metric3:'التنبيهات',raqeeb_metric4:'الموقع',mirage_label:'بحث في الذكاء الاصطناعي · زمالة جامعة الملك خالد',mirage_desc:'معيار تجريبي مضبوط يدرس ما إذا كان تكرار المحاكاة المضادة للواقع قد يجعل وكلاء الذكاء الاصطناعي ذوي الذاكرة يتذكرون أحداثًا متخيلة وكأنها تجارب حقيقية.',mirage_stat1:'سيناريو أساسي',mirage_stat2:'حلقة تجريبية',mirage_stat3:'مستويات تكرار',wafd_label:'محاكاة بالذكاء الاصطناعي · برمجان المدينة 2026',wafd_desc:'توأم اصطناعي لاختبار تجربة الزائر. يحاكي زوارًا افتراضيين يختلفون في اللغة والقدرات وجودة الاتصال والمهارة الرقمية لاكتشاف نقاط التعطل قبل إطلاق الخدمة.',wafd_caption:'محاكاة رحلة الزائر',tibyan_label:'منتج رقمي · المركز الثاني',tibyan_desc:'منصة عربية تدعم أسر الأطفال المصابين باضطراب فرط الحركة وتشتت الانتباه عبر المتابعة المنظمة والمحتوى التوعوي والمساعدة الذكية وتنظيم المهام والوصول إلى المختصين.',tibyan_caption:'منصة عربية لدعم الأسرة',more_work:'أعمال أخرى',more_work_title:'الأمن والمراقبة والأنظمة التطبيقية.',zemam_label:'المراقبة الذكية · المركز الثاني',zemam_desc:'منصة لإدارة المرافق في المدن الذكية تعتمد على مناطق المهام عبر GPS والتحقق بالصور ولوحات المتابعة والتحديث الآلي لحالة المهام.',mersal_label:'مراسلات رقمية آمنة',mersal_desc:'تصور لمنصة مراسلات سرية تجمع بين الذكاء الاصطناعي والبلوك تشين والتشفير والتوقيعات الرقمية لتعزيز الخصوصية والموثوقية وإمكانية التتبع.',experience_kicker:'الخبرات',experience_title:'عمل وبحث وتدريب وقيادة.',current:'حاليًا',exp_basiratk_title:'تطوير نماذج الذكاء الاصطناعي · بصيرتك',exp_basiratk_desc:'العمل على مهام نماذج الذكاء الاصطناعي وتحويل الكلام العربي القانوني إلى نص، بما يشمل تجهيز البيانات والمقارنة بين النماذج والاختبار والتقييم.',exp_fellowship_title:'الزمالة الصيفية للبحث في الذكاء الاصطناعي · جامعة الملك خالد',exp_fellowship_desc:'بحث موثوقية ذاكرة وكلاء الذكاء الاصطناعي من خلال معيار MIRAGE-MEM وتصميم تجربة محكومة.',exp_trainer_title:'مدربة ذكاء اصطناعي وويب · برنامج صيف طيبة',exp_trainer_desc:'دربت نحو 38 طالبًا وطالبة من أعمار مختلفة على مفاهيم الذكاء الاصطناعي وأساسيات الويب من خلال أنشطة ومشاريع تطبيقية.',exp_thinksync_title:'متدربة تطوير برمجيات · ThinkSync',exp_thinksync_desc:'عملت على UI/UX وتحليل الأنظمة وتطوير الواجهات باستخدام Next.js وتطوير Flutter وضمان الجودة وسير العمل عبر GitHub واختبار API وبيئات التكامل المحلية.',exp_hash_title:'قائدة لجنة العلاقات العامة · نادي هاش بلس',exp_hash_desc:'قدت أعمال العلاقات العامة والتنسيق والتواصل في النادي، وساهمت في تنظيم العمل وتعزيز تفاعل الأعضاء.',skills_kicker:'المهارات',skills_title:'منظومة مترابطة تتمحور حول نظم المعلومات.',proof_kicker:'إنجازات ومحطات',proof_title:'تقدير وتدريب وقيادة في تجارب حقيقية.',proof_award:'المركز الثاني · الابتكار الرقمي والذكاء الاصطناعي الصيفي',proof_award_box:'لحظة التكريم · 2026',proof_training:'مدربة ذكاء اصطناعي وويب · برنامج صيف طيبة',proof_hash:'قائدة لجنة العلاقات العامة · نادي هاش بلس',contact_kicker:'تواصل',contact_title:'لنبنِ شيئًا<br>له فائدة حقيقية.',contact_body:'مهتمة بفرص الذكاء الاصطناعي والبرمجيات والبحث والمنتجات الرقمية.',back_top:'العودة للأعلى ↑'}};
+const capContent={en:{ai:{index:'01',title:'AI & Data',desc:'Machine learning, AI model work, data analysis and experimentation across applied and research projects.',tools:['Python','Machine Learning','AI Models','Power BI','Jupyter','Google Colab'],proof:'RAQEEB · MIRAGE-MEM · Basiratk'},frontend:{index:'02',title:'Frontend & Product',desc:'Building usable interfaces and product flows across web and mobile applications.',tools:['Next.js','React','TypeScript','JavaScript','Tailwind CSS','Flutter','Dart','Figma'],proof:'Draia · RAQEEB · Tibyan'},backend:{index:'03',title:'Backend & APIs',desc:'Working with APIs, data layers, integration, testing and local development environments.',tools:['FastAPI','REST APIs','ASP.NET Core','PostgreSQL','SQL','Firebase','Swagger','Docker'],proof:'RAQEEB · Draia'},iot:{index:'04',title:'IoT & Smart Systems',desc:'Connected-device concepts spanning sensing, embedded systems, monitoring and smart environments.',tools:['IoT','Raspberry Pi','Arduino','EEG','OpenBCI','Cumulocity'],proof:'RAQEEB · NexAIoT · Zemam'},systems:{index:'05',title:'Systems, QA & Research',desc:'Connecting requirements, system structure, quality, documentation and research methodology.',tools:['System Analysis','Requirements','SDLC','QA','API Testing','Documentation','Research Methodology'],proof:'MIRAGE-MEM · Draia · WAFD'}},ar:{ai:{index:'01',title:'الذكاء الاصطناعي والبيانات',desc:'تعلم الآلة والعمل على نماذج الذكاء الاصطناعي وتحليل البيانات وإجراء التجارب في مشاريع تطبيقية وبحثية.',tools:['Python','تعلم الآلة','نماذج الذكاء الاصطناعي','Power BI','Jupyter','Google Colab'],proof:'RAQEEB · MIRAGE-MEM · بصيرتك'},frontend:{index:'02',title:'الواجهات والمنتجات',desc:'بناء واجهات وتجارب استخدام عملية في تطبيقات الويب والجوال.',tools:['Next.js','React','TypeScript','JavaScript','Tailwind CSS','Flutter','Dart','Figma'],proof:'Draia · RAQEEB · Tibyan'},backend:{index:'03',title:'الخلفية والواجهات البرمجية',desc:'العمل على APIs وطبقات البيانات والتكامل والاختبار وبيئات التطوير المحلية.',tools:['FastAPI','REST APIs','ASP.NET Core','PostgreSQL','SQL','Firebase','Swagger','Docker'],proof:'RAQEEB · Draia'},iot:{index:'04',title:'إنترنت الأشياء والأنظمة الذكية',desc:'مفاهيم الأجهزة المتصلة والاستشعار والأنظمة المضمنة والمراقبة والبيئات الذكية.',tools:['IoT','Raspberry Pi','Arduino','EEG','OpenBCI','Cumulocity'],proof:'RAQEEB · NexAIoT · Zemam'},systems:{index:'05',title:'الأنظمة والجودة والبحث',desc:'ربط المتطلبات وهيكلة الأنظمة وضمان الجودة والتوثيق ومنهجية البحث.',tools:['تحليل الأنظمة','المتطلبات','SDLC','QA','اختبار API','التوثيق','منهجية البحث'],proof:'MIRAGE-MEM · Draia · WAFD'}}};
+let currentLang='en';
+const langSwitch=document.getElementById('lang-switch');
+const translatables=[...document.querySelectorAll('[data-i18n]')];
+function setLanguage(lang){currentLang=lang;document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';langSwitch.textContent=lang==='en'?'AR':'EN';translatables.forEach(el=>{const value=translations[lang][el.dataset.i18n];if(value!==undefined)el.innerHTML=value});const active=document.querySelector('.cap-node.active');if(active)renderCapability(active.dataset.cap)}
+langSwitch.addEventListener('click',()=>setLanguage(currentLang==='en'?'ar':'en'));
+const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+const scenes={violet:['#120d2d','#071125'],ocean:['#08142a','#041724'],indigo:['#0d1230','#071020'],deepblue:['#07152e','#050a1a'],cyan:['#071a2a','#06101f'],mint:['#071d29','#07101c']};
+const sceneObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const pair=scenes[entry.target.dataset.scene];if(pair){document.documentElement.style.setProperty('--scene-a',pair[0]);document.documentElement.style.setProperty('--scene-b',pair[1])}}})},{threshold:.25});
+document.querySelectorAll('[data-scene]').forEach(el=>sceneObserver.observe(el));
+const navLinks=[...document.querySelectorAll('.desktop-nav a')];
+const sectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}})},{rootMargin:'-35% 0px -55% 0px'});
+['about','work','experience','capabilities','contact'].forEach(id=>{const el=document.getElementById(id);if(el)sectionObserver.observe(el)});
+const progress=document.getElementById('page-progress-bar');
+function updateScroll(){const h=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(h>0?window.scrollY/h*100:0)+'%';document.querySelectorAll('.parallax-frame img').forEach(img=>{const r=img.parentElement.getBoundingClientRect();const center=r.top+r.height/2-window.innerHeight/2;img.style.transform=`translateY(${center*-0.025}px) scale(1.06)`})}
+window.addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+const menuToggle=document.getElementById('menu-toggle');const mobileMenu=document.getElementById('mobile-menu');
+menuToggle.addEventListener('click',()=>{const open=menuToggle.classList.toggle('open');mobileMenu.classList.toggle('open',open);mobileMenu.setAttribute('aria-hidden',String(!open));menuToggle.setAttribute('aria-expanded',String(open));document.body.style.overflow=open?'hidden':''});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menuToggle.classList.remove('open');mobileMenu.classList.remove('open');mobileMenu.setAttribute('aria-hidden','true');menuToggle.setAttribute('aria-expanded','false');document.body.style.overflow=''}));
+const detail=document.getElementById('capability-detail');
+function renderCapability(key){const d=capContent[currentLang][key];detail.innerHTML=`<p class="cap-index">${d.index}</p><h3>${d.title}</h3><p>${d.desc}</p><div class="cap-tools">${d.tools.map(t=>`<span>${t}</span>`).join('')}</div><p class="cap-proof">${d.proof}</p>`}
+document.querySelectorAll('.cap-node').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.cap-node').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderCapability(btn.dataset.cap)}));
+const film=document.getElementById('filmstrip');document.getElementById('film-next').addEventListener('click',()=>film.scrollBy({left:currentLang==='ar'?-Math.min(window.innerWidth*.65,560):Math.min(window.innerWidth*.65,560),behavior:'smooth'}));document.getElementById('film-prev').addEventListener('click',()=>film.scrollBy({left:currentLang==='ar'?Math.min(window.innerWidth*.65,560):-Math.min(window.innerWidth*.65,560),behavior:'smooth'}));
+const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');let mx=0,my=0,rx=0,ry=0,cursorVisible=false;
+function showCursor(){if(!cursorVisible){dot.style.opacity='1';ring.style.opacity='1';cursorVisible=true}}
+function hideCursor(){dot.style.opacity='0';ring.style.opacity='0';cursorVisible=false}
+window.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;mx=e.clientX;my=e.clientY;showCursor();dot.style.transform=`translate(${mx-3}px,${my-3}px)`});
+window.addEventListener('mouseout',e=>{if(!e.relatedTarget)hideCursor()});window.addEventListener('blur',hideCursor);
+function animateCursor(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform=`translate(${rx-17}px,${ry-17}px)`;requestAnimationFrame(animateCursor)}animateCursor();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('is-link'));el.addEventListener('mouseleave',()=>ring.classList.remove('is-link'))});
+const canvas=document.getElementById('particle-canvas');const ctx=canvas.getContext('2d');let particles=[];let raf;const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function resizeCanvas(){const dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=innerWidth*dpr;canvas.height=innerHeight*dpr;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.min(85,Math.max(34,Math.floor(innerWidth/18)));particles=Array.from({length:count},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.35,vx:(Math.random()-.5)*.08,vy:Math.random()*.09+.015,a:Math.random()*.55+.18}))}
+function drawParticles(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const p of particles){p.x+=p.vx;p.y+=p.vy;if(p.y>innerHeight+4)p.y=-4;if(p.x<-4)p.x=innerWidth+4;if(p.x>innerWidth+4)p.x=-4;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(219,231,255,${p.a})`;ctx.fill()}raf=requestAnimationFrame(drawParticles)}
+resizeCanvas();if(!reduceMotion)drawParticles();window.addEventListener('resize',()=>{cancelAnimationFrame(raf);resizeCanvas();if(!reduceMotion)drawParticles()});
+setLanguage('en');
