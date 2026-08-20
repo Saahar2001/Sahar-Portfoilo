@@ -1,0 +1,81 @@
+أعد تصميم وتطوير بورتفوليو شخصي احترافي لسحر سلطان، خريجة نظم معلومات تعمل على مشاريع في الذكاء الاصطناعي والبحث والواجهات وIoT والمنتجات الرقمية.
+
+الهدف البصري:
+- Portfolio developer/editorial immersive وليس قالب SaaS أو مجموعة Cards متكررة.
+- استلهام عام من مواقع المطورين الإبداعية على Behance: تايبوجرافي كبيرة، مساحات فارغة مدروسة، انتقالات ناعمة، ومشاريع معروضة كـ case studies مختلفة بصريًا.
+- الهوية: مزيج البحر العميق + الفضاء، بدون صور فضاء جاهزة أو كليشيهات. استخدم إحساس العمق، المد، النجوم الدقيقة، المدارات، والضوء تحت الماء.
+- لوحة الألوان الأساسية: #050614, #8B5CFF, #5C45E9, #3F70FF, #62DDFF, #BF9CFF مع أبيض مائل للبنفسجي.
+- لا تستخدم اللون الأخضر كلون أساسي.
+- لا تجعل كل الأقسام Glassmorphism cards؛ استخدمه فقط كلمسات صغيرة.
+
+الهوية الشخصية:
+- استخدم assets/sahar-wordmark.svg كهوية كتابية أساسية وassets/sahar-monogram.svg كرمز صغير.
+- لا تضف LinkedIn.
+- لا تذكر ThinkSync في الـHero أو المقدمة. يظهر فقط داخل Experience.
+- الاسم في الـHero: SAHAR SULTAN.
+- الوصف: Information Systems · AI · Digital Products.
+
+الـHero:
+- Full viewport تقريبًا.
+- الاسم كبير جدًا ومميز.
+- مشهد تفاعلي على اليمين يشبه كوكب/كرة تجمع البحر والفضاء، مبني بـCSS/Canvas أو Three.js إذا كان التنفيذ مستقرًا.
+- Parallax بسيط حسب حركة الماوس.
+- Custom cursor ناعم مع glow موف/أزرق.
+- CTA: Explore my work + Download CV.
+- لا تستخدم صورة شخصية إلا إذا أضفتها أنا لاحقًا.
+
+المشاريع:
+لا تعرض المشاريع في Grid من بطاقات متطابقة.
+كل مشروع يكون Section/Stage كبير مستقل مع رقم ضخم وخلفية أو visual مختلف:
+1. Raqeeb — Graduation Project / Best Project 2026.
+2. MIRAGE-MEM — AI Research / 1,536 scenarios / 10,752 episodes / 7 repetition levels.
+3. WAFD — Synthetic twin for visitor experience.
+4. Tibyan — Arabic ADHD family support / 2nd Place.
+5. Zemam + Mersal في Layout ثنائي مختلف عن المشاريع الأساسية.
+
+لكل مشروع:
+- Title كبير.
+- وصف مختصر جدًا.
+- أهم التقنيات فقط.
+- النتيجة/الجائزة/الحالة.
+- صورة فعلية عندما تكون موجودة في assets.
+- hover/parallax خفيف على media، بدون 3D tilt مبالغ فيه.
+
+المهارات:
+ممنوع عرض Skills كعشرات pills فقط.
+اعرضها كـ interactive constellation/orbit map:
+- المركز: Information Systems.
+- AI & Data.
+- Product & Frontend.
+- Systems & Quality.
+- Backend & IoT.
+عند الضغط على أي cluster تتغير لوحة التفاصيل وتظهر الأدوات والمشاريع التي استخدمت فيها المهارة.
+على الجوال تتحول إلى تجربة واضحة وسهلة بدون كسر التصميم.
+
+Experience:
+اعرضها كـ logbook / dive log زمني وليس cards.
+الترتيب:
+- AI Model Development · Basiratk.
+- AI Summer Research Fellowship · King Khalid University.
+- Part-time AI & Web Trainer · Taibah Summer Program (~38 students).
+- Software Development Trainee · ThinkSync (180 hours) — هذا هو المكان الوحيد لذكر الشركة.
+- PR Committee Leader · Hash Plus Club.
+
+Proof & Moments:
+اعرض صور الجوائز والشهادات والتدريب كـ editorial photo reel أو film strip.
+لا تجعلها بطاقات متساوية.
+
+التواصل:
+قسم ختامي كبير جدًا بنص LET'S BUILD SOMETHING USEFUL مع البريد وGitHub وX وWhatsApp فقط.
+
+التقنية والجودة:
+- HTML/CSS/JS أو React حسب المشروع الحالي، لكن حافظ على سهولة الرفع على GitHub Pages.
+- Responsive حقيقي من 360px إلى شاشات 4K.
+- دعم English/Arabic toggle وRTL صحيح.
+- لا تكسر URLs أو الأصول المحلية.
+- Semantic HTML + aria labels + prefers-reduced-motion.
+- لا تستخدم مكتبات Animation ثقيلة إذا لم تضف قيمة واضحة.
+- حافظ على FPS جيد وعدم وجود horizontal overflow.
+- افحص console errors، broken links، mobile layout، desktop layout، Arabic RTL أربع مرات قبل التسليم.
+
+الأهم: التصميم يجب أن يبدو وكأنه هوية شخصية لمطورة/باحثة تقنية، وليس صفحة مولدة تلقائيًا أو SaaS landing page.
