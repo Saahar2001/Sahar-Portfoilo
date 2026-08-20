@@ -3,245 +3,444 @@
 
   const translations = {
     ar: {
-      navProjects:'المشاريع',navSkills:'المهارات',navExperience:'الخبرات',navContact:'تواصل',
-      heroEyebrow:'نظم المعلومات · ذكاء اصطناعي · تطوير منتجات',
-      heroLead:'خريجة نظم معلومات، ومهتمة بالذكاء الاصطناعي وتطوير المنتجات التقنية. أحب تحويل المشكلات من أفكار إلى حلول عملية، سواء كانت تجربة بحثية، أو ميزة ذكية، أو واجهة متجاوبة، أو نظامًا مترابطًا.',
-      viewWork:'استعرض مشاريعي',downloadCv:'تحميل السيرة الذاتية',meta1:'المدينة المنورة، المملكة العربية السعودية',meta2:'أبحث عن فرص في هندسة الذكاء الاصطناعي ونظم المعلومات وتطوير المنتجات',
-      noteA1:'حاليًا',noteA2:'ذكاء اصطناعي + بحث',noteB1:'أطوّر',noteB2:'أنظمة ومنتجات ذكية',
-      aboutTag:'عني',aboutTitle:'أحب أن أبدأ من المشكلة، وأستمر حتى يتحول الحل إلى شيء عملي ومفيد.',
-      aboutText:'علّمتني نظم المعلومات أن أنظر إلى الصورة كاملة: المستخدم، والعمليات، والبيانات، والتقنية، وطريقة تنفيذ الحل. لذلك أحب العمل عند تقاطع الذكاء الاصطناعي والواجهات والاختبار وتحليل الأنظمة، بدل التعامل مع كل جزء بمعزل عن الآخر.',
-      gpa:'المعدل من 5.00',students:'طالبًا تم تدريبهم',secondPlace:'مرتان بالمركز الثاني',
-      projectsTag:'أعمال مختارة',projectsTitle:'مشاريع شكّلت طريقتي في البناء والتجربة.',projectsIntro:'أبحاث ذكاء اصطناعي، وتقنيات مساندة، وتجربة زائر، ودعم أسري، ومراقبة ذكية، ومراسلات رقمية آمنة.',
-      raqKicker:'مشروع التخرج',bestProject:'أفضل مشروع · 2026',raqTitle:'رقيب — منصة ذكية لسلامة واستقلالية كبار السن',raqText:'منصة مساندة لكبار السن تجمع تطبيقات الهاتف مع نماذج الذكاء الاصطناعي وإشارات EEG وأجهزة إنترنت الأشياء ومتابعة مقدم الرعاية، وتشمل اكتشاف السقوط والمشاعر والتذكيرات وتنبيهات الطوارئ والمساعدة في العثور على الأغراض.',watchDemo:'مشاهدة العرض ↗',
-      researchKicker:'بحث ذكاء اصطناعي · جامعة الملك خالد',ongoing:'قيد العمل',mirageText:'معيار تجريبي مضبوط يدرس ما إذا كان تكرار محاكاة أحداث بديلة يمكن أن يجعل وكلاء الذكاء الاصطناعي ذوي الذاكرة يسترجعون حدثًا لم يقع، أو ينسبونه إلى تجربة حقيقية، أو يستخدمونه لاحقًا في القرار.',baseScenarios:'سيناريو أساسي',episodes:'حلقة تجريبية',levels:'مستويات تكرار',
-      hackathonKicker:'مشروع هاكثون',prototype:'قيد التطوير',wafdTitle:'وَفْد — توأم اصطناعي لتجربة الزائر',wafdText:'توأم اصطناعي لاختبار رحلة الزائر قبل إطلاق الخدمة. تمر شخصيات افتراضية متنوعة عبر الرحلة مع اختلافات في اللغة وإمكانية الوصول والمهارة الرقمية وجودة الاتصال، لكشف نقاط التعطل قبل أن يواجهها الزوار الحقيقيون.',
-      productKicker:'منتج مدعوم بالذكاء الاصطناعي',secondPlaceLabel:'المركز الثاني',tibyanTitle:'تبيان — منصة عربية لدعم أسر الأطفال ذوي اضطراب فرط الحركة وتشتت الانتباه',tibyanText:'منصة عربية تجمع التقييم الأولي ومتابعة تقدم الطفل وتنظيم المهام والتذكيرات والمحتوى الموثوق والاستشارات المتخصصة ومساعدًا ذكيًا لدعم الأسرة في المتابعة اليومية.',
-      moreWorkKicker:'أنظمة أخرى',duoTitle:'زمام + مرسال',duoText:'مشروعان يركزان على ذكاء العمليات وأمان التواصل الرقمي.',zemamTitle:'زمام — مراقبة ذكية',zemamText:'منصة لإدارة المرافق تعتمد على نطاقات المهام بالموقع الجغرافي والتحقق بالصور ولوحات المتابعة وتحديث حالة المهام تلقائيًا.',zemamAward:'المركز الثاني · مسار المراقبة الذكية',mersalTitle:'مرسال — مراسلات آمنة',mersalText:'مفهوم لمراسلات رقمية سرية يوظف الذكاء الاصطناعي والبلوك تشين والتشفير والتوقيعات الرقمية لتعزيز الخصوصية والأصالة والتصنيف وقابلية التتبع.',mersalType:'أمن معلومات + ذكاء اصطناعي',
-      skillsTag:'المهارات',skillsTitle:'المهارات التي أعتمد عليها من الفكرة إلى التنفيذ.',skillsIntro:'أقوى شغلي يكون عند تقاطع الذكاء الاصطناعي وتطوير المنتجات وتحليل الأنظمة والجودة والتقنيات المترابطة.',nodeCore:'نظم المعلومات',nodeAi:'الذكاء الاصطناعي والبيانات',nodeProduct:'المنتج والواجهات',nodeSystems:'الأنظمة والجودة',nodeIot:'الخلفية وإنترنت الأشياء',
-      experienceTag:'الخبرات',experienceTitle:'من البحث إلى التدريب وفرق تطوير المنتجات.',basiratkTitle:'تطوير نموذج ذكاء اصطناعي · بصيرتك',basiratkText:'أعمل على نموذج لتحويل الكلام العربي القانوني إلى نص، ويشمل ذلك تجهيز البيانات وتنظيفها، وتغطية المصطلحات القانونية، وتقييم المخرجات، والاختبار، ودعم التكامل مع النظام.',fellowshipTitle:'زميلة بحثية صيفية في الذكاء الاصطناعي · جامعة الملك خالد',fellowshipText:'أعمل على MIRAGE-MEM، وهو معيار تجريبي لدراسة تضخم التخيل ومصدر الذاكرة وموثوقيتها لدى وكلاء الذكاء الاصطناعي ذوي الذاكرة.',trainerTitle:'مدربة تقنية بدوام جزئي · صيف طيبة',trainerText:'درّبت نحو 38 طالبًا وطالبة من عمر 9 إلى 18 سنة على أساسيات الويب وأدوات الذكاء الاصطناعي وتطوير الأفكار والنماذج الأولية وعرض المشاريع بأسلوب يناسب تحديات الهاكثون.',thinksyncTitle:'متدربة تطوير برمجيات · ThinkSync',thinksyncText:'أكملت 180 ساعة في UI/UX وتحليل الأنظمة وتطوير الواجهات وتطبيقات الهاتف وضمان الجودة والتكامل. استخدمت Next.js وFlutter/Dart وGit/GitHub وDocker وPostgreSQL وPrisma وNestJS وSwagger ضمن عمل جماعي قائم على المهام والمراجعات.',hashTitle:'قائدة لجنة العلاقات العامة · نادي هاش بلس',hashText:'قدت التواصل والتنسيق ومتابعة المهام والتوثيق وتفاعل الأعضاء وأنشطة التقدير داخل اللجنة خلال يوليو وأغسطس 2026.',
-      proofTag:'محطات وإنجازات',proofTitle:'محطات أعتز بها.',proofIntro:'الجوائز والتدريب والقيادة كانت جزءًا مهمًا من تجربتي وطريقة تطوري ومشاركتي مع الآخرين.',awardCaption:'المركز الثاني · الابتكار الرقمي والذكاء الاصطناعي',awardSub:'البرنامج المهني الصيفي · 2026',trainerCaption:'مدربة برنامج جيل الذكاء الاصطناعي',trainerSub:'نحو 38 طالبًا وطالبة · من 9 إلى 18 سنة',leaderCaption:'قيادة لجنة العلاقات العامة',leaderSub:'نادي هاش بلس · يوليو–أغسطس 2026',
-      contactTag:'تواصل',contactKicker:'هل لديك فرصة أو مشروع في الذكاء الاصطناعي أو البيانات أو المنتجات الرقمية أو نظم المعلومات؟',contactLine1:'لنبنِ',contactLine2:'شيئًا له أثر.',contactLocation:'المدينة المنورة، المملكة العربية السعودية',footerText:'فضول في التعلّم، وتفكير منظومي، ودقة في التنفيذ.'
+      skip: 'تخطي إلى المحتوى',
+      navProjects: 'المشاريع',
+      navCapabilities: 'المهارات',
+      navExperience: 'الخبرات',
+      navProof: 'الإنجازات',
+      navContact: 'تواصل',
+      heroIndex: 'PORTFOLIO / 2026',
+      heroOverline: 'نظم المعلومات · الذكاء الاصطناعي · البحث · المنتجات الرقمية',
+      heroLead: 'أبني وأبحث في الأنظمة الرقمية الذكية، عند تقاطع الذكاء الاصطناعي والبرمجيات والبحث والبيانات والتفكير المتمحور حول الإنسان.',
+      exploreWork: 'استعرض الأعمال المختارة',
+      downloadCv: 'تحميل السيرة الذاتية',
+      heroLocation: 'المدينة المنورة، المملكة العربية السعودية',
+      heroFocus: 'هندسة الذكاء الاصطناعي · نظم المعلومات · البحث',
+      nowTitle: 'أعمل حاليًا على',
+      nowBasiratk: 'تطوير نموذج لتحويل الكلام العربي القانوني إلى نص.',
+      nowMirage: 'بحث حول تضخم التخيل لدى وكلاء الذكاء الاصطناعي ذوي الذاكرة.',
+      nowWafd: 'توأم اصطناعي للزائر لاختبار الخدمات قبل إطلاقها.',
+      aboutLabel: 'عني',
+      aboutTitle: 'تفكير منظومي يتحول إلى حلول يستطيع الناس استخدامها فعلًا.',
+      aboutText: 'أنا خريجة نظم معلومات، وأستمتع ببناء الأنظمة الرقمية الذكية والبحث فيها. أعمل براحة بين صياغة المشكلة، والذكاء الاصطناعي والبيانات، وتطوير الواجهات، وتحليل الأنظمة، والاختبار، والتقنيات المترابطة.',
+      aboutNote: 'القاسم المشترك ليس أداة واحدة، بل فهم النظام كاملًا: الناس، والمعلومات، والبرمجيات، والأجهزة، والقيود، وطريقة التنفيذ.',
+      projectsLabel: 'أعمال مختارة',
+      projectsTitle: 'ستة مشاريع. ست مساحات مختلفة للمشكلة.',
+      projectsIntro: 'دراسات حالة مختارة في سهولة الوصول، وأبحاث وكلاء الذكاء الاصطناعي، وتجربة الزائر، ودعم الأسر، والمراقبة الذكية، والتواصل الآمن.',
+      raqAward: 'أفضل مشروع تخرج',
+      raqTitle: 'السلامة والاستقلالية والمساندة الذكية لكبار السن.',
+      raqText: 'رقيب نظام ذكي لدعم سهولة الوصول وسلامة كبار السن، يجمع نماذج الذكاء الاصطناعي وإشارات EEG وأجهزة إنترنت الأشياء وتطبيقات الهاتف ومتابعة مقدم الرعاية واكتشاف السقوط والتعرف على المشاعر ودعم الطوارئ والمساعدة في العثور على الأغراض.',
+      watchDemo: 'مشاهدة العرض',
+      mirageMeta: 'بحث ذكاء اصطناعي · جامعة الملك خالد',
+      mirageTitle: 'هل يمكن لوكيل ذكاء اصطناعي أن يتذكر حدثًا لم يحدث إلا في خياله؟',
+      mirageText: 'مشروع بحثي يدرس تضخم التخيل الاصطناعي لدى وكلاء الذكاء الاصطناعي ذوي الذاكرة من خلال تكرار محاكاة أحداث بديلة وحلقات تجريبية مضبوطة.',
+      baseScenarios: 'سيناريو أساسي',
+      episodes: 'حلقة تجريبية',
+      repetitionLevels: 'مستويات تكرار',
+      wafdMeta: 'توأم اصطناعي للزائر',
+      wafdTitle: 'اختبر تجربة الزائر قبل أن يضطر الزائر الحقيقي إلى اختبارها.',
+      wafdText: 'يحاكي وَفْد زوارًا افتراضيين متنوعين عبر رحلات الخدمات الرقمية والميدانية، ليكشف أين يمكن أن تتعطل التجربة بسبب اللغة أو إمكانية الوصول أو جودة الاتصال أو المهارة الرقمية أو تصميم الخدمة.',
+      secondPlace: 'المركز الثاني',
+      tibyanTitle: 'بيئة دعم عربية للأسر التي تتعامل مع اضطراب فرط الحركة وتشتت الانتباه.',
+      tibyanText: 'تدعم تبيان أسر الأطفال ذوي اضطراب فرط الحركة وتشتت الانتباه عبر الإرشاد المدعوم بالذكاء الاصطناعي، ومتابعة الطفل، وتنظيم المهام، والمحتوى التعليمي، ودعم المجتمع، وأدوات أسرية منظمة.',
+      zemamAward: 'المركز الثاني · مسار المراقبة الذكية',
+      zemamTitle: 'مراقبة ذكية للمرافق مدعومة بالذكاء الاصطناعي.',
+      zemamText: 'مفهوم للمراقبة الذكية لعمليات المرافق يعتمد على مهام مرتبطة بالموقع، والتحقق البصري، ولوحات المتابعة، وتحديث حالات المهام تلقائيًا.',
+      mersalMeta: 'مراسلات آمنة',
+      mersalTitle: 'مراسلات رقمية سرية بثقة قابلة للتحقق.',
+      mersalText: 'مفهوم لمراسلات آمنة يجمع الذكاء الاصطناعي والبلوك تشين والتشفير والتوقيعات الرقمية والخصوصية وقابلية التتبع للتواصل الرقمي الحساس.',
+      capabilitiesLabel: 'منظومة المهارات',
+      capabilitiesTitle: 'ليست قائمة أدوات، بل طريقة عمل مترابطة.',
+      capabilitiesIntro: 'اختاري مجالًا لرؤية التقنيات والممارسات التي أستخدمها ضمن سياقها الحقيقي.',
+      capAi: 'الذكاء الاصطناعي والبيانات',
+      capFrontend: 'الواجهات والمنتج',
+      capSystems: 'الأنظمة وضمان الجودة',
+      capBackend: 'الخلفية وواجهات API',
+      capIot: 'إنترنت الأشياء والأنظمة الذكية',
+      capResearch: 'البحث ونظم المعلومات',
+      experienceLabel: 'الخبرات',
+      experienceTitle: 'بحث، وتطوير برمجيات، وتدريب، وقيادة.',
+      current: 'حاليًا',
+      basiratkRole: 'تطوير نموذج ذكاء اصطناعي · بصيرتك',
+      basiratkExperience: 'أعمل على تطوير نموذج لتحويل الكلام العربي القانوني إلى نص، من تجهيز البيانات وتنظيفها وتغطية المصطلحات القانونية إلى تقييم المخرجات والاختبار ودعم التكامل مع النظام.',
+      fellowshipRole: 'زميلة بحثية صيفية في الذكاء الاصطناعي · جامعة الملك خالد',
+      fellowshipExperience: 'أعمل على MIRAGE-MEM، وهي دراسة مضبوطة لتضخم التخيل ونسبة مصدر الذاكرة وموثوقيتها لدى وكلاء الذكاء الاصطناعي ذوي الذاكرة.',
+      trainerRole: 'مدربة ذكاء اصطناعي وويب بدوام جزئي · برنامج صيف طيبة',
+      trainerExperience: 'درّبت نحو 38 طالبًا وطالبة من فئات عمرية مختلفة على أدوات الذكاء الاصطناعي وأساسيات الويب وتطوير الأفكار والنماذج الأولية والإرشاد والعرض التقني.',
+      thinksyncRole: 'متدربة تطوير برمجيات · ThinkSync',
+      thinksyncExperience: 'عملت في تطوير الواجهات وتطبيقات الهاتف وUI/UX وتحليل الأنظمة وضمان الجودة وتكامل واجهات API، ضمن سير عمل جماعي يعتمد على Git/GitHub وممارسات تطوير موجهة للإنتاج.',
+      hashRole: 'قائدة لجنة العلاقات العامة · نادي هاش بلس',
+      hashExperience: 'قدت التواصل والتنسيق ومتابعة المهام والتوثيق وتفاعل الأعضاء وأنشطة التقدير داخل اللجنة.',
+      proofLabel: 'إنجازات ومحطات',
+      proofTitle: 'التقدير يصبح أهم عندما يكون دليلًا على عمل حقيقي.',
+      awardRaqeeb: 'أفضل مشروع تخرج',
+      awardZemam: 'المركز الثاني · مسار المراقبة الذكية',
+      awardTibyan: 'المركز الثاني',
+      proofRecognition: 'تكريم بالمركز الثاني · 2026',
+      proofTraining: 'تدريب في الذكاء الاصطناعي والويب · نحو 38 طالبًا وطالبة',
+      proofLeadership: 'قائدة لجنة العلاقات العامة · نادي هاش بلس',
+      contactLabel: 'تواصل',
+      contactPre: 'للفرص الوظيفية والبحث والتعاون والعمل التقني الجاد.',
+      contactLine1: 'لنتواصل',
+      contactLine2: 'حيث تلتقي الأنظمة بالناس.',
+      backTop: 'العودة للأعلى ↑'
     }
   };
 
-  const english = {};
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    english[el.dataset.i18n] = el.textContent.trim();
-  });
-
-  const langToggle = document.getElementById('langToggle');
-  const brandLink = document.querySelector('.brand');
-  const nav = document.querySelector('.nav');
-  let currentLang = localStorage.getItem('sahar_portfolio_lang') === 'ar' ? 'ar' : 'en';
-
-  function setLanguage(lang){
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-      el.textContent = lang === 'ar' ? (translations.ar[key] || english[key]) : english[key];
-    });
-    langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
-    langToggle.setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
-    brandLink.setAttribute('aria-label', lang === 'ar' ? 'العودة إلى بداية موقع سحر سلطان' : 'Sahar Sultan home');
-    nav.setAttribute('aria-label', lang === 'ar' ? 'التنقل الرئيسي' : 'Primary navigation');
-    localStorage.setItem('sahar_portfolio_lang', lang);
-    renderSkill(activeSkill);
-  }
-
-  langToggle.addEventListener('click', () => setLanguage(currentLang === 'en' ? 'ar' : 'en'));
-
-  const skillData = {
+  const ariaTranslations = {
     en: {
-      core:{label:'FOUNDATION',title:'Information Systems',text:'Connecting requirements, users, processes, data, technology, and delivery as one system.',tags:['Requirements Analysis','SDLC','Documentation','Business Thinking','Process Design','Problem Solving'],used:'Applied across Raqeeb, Draia, WAFD, and product work.'},
-      ai:{label:'AI + DATA',title:'AI, ML & Analytics',text:'Preparing data, evaluating models, building AI-assisted behavior, and designing controlled research experiments.',tags:['Python','Machine Learning','AI Models','Data Analysis','Power BI','Jupyter','Model Evaluation','AI Agents'],used:'Applied in MIRAGE-MEM, Basiratk, Raqeeb, Tibyan, and smart-city projects.'},
-      product:{label:'PRODUCT + FRONTEND',title:'Interfaces people can use',text:'Turning product requirements and designs into responsive, usable interfaces and complete user flows.',tags:['Next.js','TypeScript','Flutter','Dart','React.js','HTML/CSS','Tailwind CSS','Figma','RTL UX'],used:'Applied in Draia, Raqeeb, Tibyan, Boka, and web projects.'},
-      systems:{label:'SYSTEMS + QUALITY',title:'Analysis, QA & integration',text:'Breaking systems into testable parts, validating flows, finding integration issues, and documenting decisions clearly.',tags:['QA','API Testing','Swagger','Git/GitHub','Troubleshooting','Responsive QA','User Flows','Documentation'],used:'Applied heavily in Draia, integration work, and full-stack projects.'},
-      iot:{label:'BACKEND + IoT',title:'Connected systems',text:'Working with APIs, databases, cloud services, devices, sensors, and the infrastructure that connects them.',tags:['FastAPI','NestJS','PostgreSQL','Firebase','Docker','Redis','Prisma','Raspberry Pi','Arduino','OpenBCI EEG'],used:'Applied in Raqeeb, Draia, IoT training, and smart-system concepts.'}
+      brandHome: 'Sahar Sultan home',
+      mainNav: 'Primary navigation',
+      mobileNav: 'Mobile navigation',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
+      capabilityTabs: 'Capability areas',
+      awardsLabel: 'Selected achievements'
     },
     ar: {
-      core:{label:'الأساس',title:'نظم المعلومات',text:'ربط المتطلبات والمستخدمين والعمليات والبيانات والتقنية والتنفيذ ضمن صورة متكاملة واحدة.',tags:['تحليل المتطلبات','دورة حياة تطوير الأنظمة','التوثيق','فهم الأعمال','تصميم العمليات','حل المشكلات'],used:'طبقتها في رقيب ودرايا ووفد وعدة أعمال مرتبطة بتطوير المنتجات.'},
-      ai:{label:'الذكاء الاصطناعي والبيانات',title:'الذكاء الاصطناعي والتعلّم الآلي والتحليل',text:'تجهيز البيانات وتقييم النماذج وبناء سلوك مدعوم بالذكاء الاصطناعي وتصميم تجارب بحثية مضبوطة.',tags:['Python','Machine Learning','AI Models','Data Analysis','Power BI','Jupyter','Model Evaluation','AI Agents'],used:'طبقتها في MIRAGE-MEM وبصيرتك ورقيب وتبيان ومشاريع مرتبطة بالمدن الذكية.'},
-      product:{label:'المنتج والواجهات',title:'واجهات واضحة وقابلة للاستخدام',text:'تحويل متطلبات المنتج والتصاميم إلى واجهات متجاوبة وتدفقات استخدام تعمل بشكل متكامل.',tags:['Next.js','TypeScript','Flutter','Dart','React.js','HTML/CSS','Tailwind CSS','Figma','RTL UX'],used:'طبقتها في درايا ورقيب وتبيان وبوكا وعدة مشاريع ويب.'},
-      systems:{label:'الأنظمة والجودة',title:'التحليل وضمان الجودة والتكامل',text:'تقسيم الأنظمة إلى أجزاء قابلة للاختبار، والتحقق من تدفقات الاستخدام، واكتشاف مشكلات التكامل، وتوثيق القرارات بوضوح.',tags:['QA','API Testing','Swagger','Git/GitHub','Troubleshooting','Responsive QA','User Flows','Documentation'],used:'طبقتها بشكل مكثف في درايا وأعمال التكامل ومشاريع التطوير المتكامل.'},
-      iot:{label:'الخلفية وإنترنت الأشياء',title:'أنظمة وتقنيات مترابطة',text:'العمل مع الواجهات البرمجية (API) وقواعد البيانات والخدمات السحابية والأجهزة والمستشعرات والبنية التي تربط بينها.',tags:['FastAPI','NestJS','PostgreSQL','Firebase','Docker','Redis','Prisma','Raspberry Pi','Arduino','OpenBCI EEG'],used:'طبقتها في رقيب ودرايا وتدريب إنترنت الأشياء ومفاهيم الأنظمة الذكية.'}
+      brandHome: 'العودة إلى بداية موقع سحر سلطان',
+      mainNav: 'التنقل الرئيسي',
+      mobileNav: 'تنقل الجوال',
+      openMenu: 'فتح القائمة',
+      closeMenu: 'إغلاق القائمة',
+      capabilityTabs: 'مجالات المهارات',
+      awardsLabel: 'إنجازات مختارة'
     }
   };
 
-  const skillPanel = {
-    label:document.getElementById('skillLabel'),
-    title:document.getElementById('skillTitle'),
-    text:document.getElementById('skillText'),
-    tags:document.getElementById('skillTags'),
-    used:document.getElementById('skillUsed')
+  const altTranslations = {
+    en: {
+      wafdAlt: 'WAFD project visual',
+      tibyanAlt: 'Tibyan Arabic platform presentation',
+      awardImageAlt: 'Second-place recognition',
+      trainerImageAlt: 'AI training program evidence'
+    },
+    ar: {
+      wafdAlt: 'تصور مشروع وَفْد',
+      tibyanAlt: 'عرض منصة تبيان العربية',
+      awardImageAlt: 'صورة تكريم بالمركز الثاني',
+      trainerImageAlt: 'صورة توثق تجربة التدريب في الذكاء الاصطناعي'
+    }
   };
 
-  let activeSkill = 'core';
-
-  function renderSkill(key){
-    activeSkill = key;
-    const data = skillData[currentLang][key];
-    if(!data) return;
-    skillPanel.label.textContent = data.label;
-    skillPanel.title.textContent = data.title;
-    skillPanel.text.textContent = data.text;
-    skillPanel.tags.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join('');
-    skillPanel.used.textContent = data.used;
-    document.querySelectorAll('.skill-node').forEach(btn => {
-      const active = btn.dataset.skill === key;
-      btn.classList.toggle('active', active);
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
-  }
-
-  document.querySelectorAll('.skill-node').forEach(btn => {
-    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
-    btn.addEventListener('click', () => renderSkill(btn.dataset.skill));
-  });
-
-  setLanguage(currentLang);
-  renderSkill(activeSkill);
-
-  const progress = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    const max = document.documentElement.scrollHeight - innerHeight;
-    progress.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
-  }, {passive:true});
-
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
+  const capabilityData = {
+    en: {
+      ai: {
+        kicker: 'AI + DATA',
+        name: 'AI & Data',
+        icon: 'AI',
+        description: 'Building, evaluating, and integrating intelligent features with attention to data quality and real system constraints.',
+        tags: ['Python', 'Machine Learning', 'AI Models', 'Data Analysis', 'Power BI', 'Jupyter', 'Google Colab'],
+        context: 'Used across AI model development, MIRAGE-MEM research, Raqeeb, and analytical work.'
+      },
+      frontend: {
+        kicker: 'FRONTEND + PRODUCT',
+        name: 'Frontend & Product',
+        icon: 'UI',
+        description: 'Turning requirements and product intent into responsive, accessible, testable digital interfaces.',
+        tags: ['Next.js', 'React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Flutter', 'Dart', 'Figma'],
+        context: 'Applied in portfolio work, ThinkSync product delivery, WAFD, mobile applications, and prototypes.'
+      },
+      systems: {
+        kicker: 'SYSTEMS + QUALITY',
+        name: 'Systems & QA',
+        icon: 'QA',
+        description: 'Thinking through flows, requirements, failure cases, integration behavior, and evidence before calling a system complete.',
+        tags: ['Requirements Analysis', 'System Analysis', 'SDLC', 'QA', 'API Testing', 'Postman', 'Documentation', 'Git/GitHub'],
+        context: 'Used in software delivery, testing plans, integration work, research workflows, and Information Systems projects.'
+      },
+      backend: {
+        kicker: 'BACKEND + APIS',
+        name: 'Backend & APIs',
+        icon: 'API',
+        description: 'Working with application services, data layers, APIs, and integration boundaries needed to connect product components.',
+        tags: ['FastAPI', 'REST APIs', 'ASP.NET Core', 'NestJS', 'PostgreSQL', 'SQL', 'Firebase', 'Prisma', 'Swagger', 'Docker'],
+        context: 'Used across prototypes, integration work, Raqeeb, ThinkSync, and service-oriented projects.'
+      },
+      iot: {
+        kicker: 'SMART SYSTEMS',
+        name: 'IoT & Smart Systems',
+        icon: 'IoT',
+        description: 'Connecting sensing, devices, edge logic, intelligent models, and user-facing software into coherent smart-system experiences.',
+        tags: ['Arduino', 'Raspberry Pi', 'IoT', 'EEG / OpenBCI', 'Sensors', 'Edge AI'],
+        context: 'Central to Raqeeb and smart-system experimentation involving EEG, IoT devices, and connected assistance.'
+      },
+      research: {
+        kicker: 'RESEARCH + IS',
+        name: 'Research & Information Systems',
+        icon: 'IS',
+        description: 'Structuring questions, experiments, evidence, processes, and information flows so technical work remains rigorous and useful.',
+        tags: ['Research Design', 'Evaluation', 'Information Systems', 'Requirements', 'Documentation', 'Experiment Design', 'Human-centered Technology'],
+        context: 'Used in MIRAGE-MEM, academic work, graduation research, product analysis, and system design.'
       }
-    });
-  }, {threshold:.09});
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    },
+    ar: {
+      ai: {
+        kicker: 'AI + DATA',
+        name: 'الذكاء الاصطناعي والبيانات',
+        icon: 'AI',
+        description: 'بناء الميزات الذكية وتقييمها ودمجها، مع الاهتمام بجودة البيانات وقيود النظام الفعلية.',
+        tags: ['Python', 'Machine Learning', 'AI Models', 'Data Analysis', 'Power BI', 'Jupyter', 'Google Colab'],
+        context: 'أستخدمها في تطوير نماذج الذكاء الاصطناعي، وبحث MIRAGE-MEM، ومشروع رقيب، والعمل التحليلي.'
+      },
+      frontend: {
+        kicker: 'FRONTEND + PRODUCT',
+        name: 'الواجهات والمنتج',
+        icon: 'UI',
+        description: 'تحويل المتطلبات وفكرة المنتج إلى واجهات رقمية متجاوبة وقابلة للوصول والاختبار.',
+        tags: ['Next.js', 'React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Flutter', 'Dart', 'Figma'],
+        context: 'أستخدمها في تطوير المنتجات والواجهات، ومشروع وَفْد، وتطبيقات الهاتف، والنماذج الأولية.'
+      },
+      systems: {
+        kicker: 'SYSTEMS + QUALITY',
+        name: 'الأنظمة وضمان الجودة',
+        icon: 'QA',
+        description: 'تحليل التدفقات والمتطلبات وحالات الفشل وسلوك التكامل والأدلة قبل اعتبار النظام مكتملًا.',
+        tags: ['Requirements Analysis', 'System Analysis', 'SDLC', 'QA', 'API Testing', 'Postman', 'Documentation', 'Git/GitHub'],
+        context: 'أستخدمها في تطوير البرمجيات وخطط الاختبار والتكامل وسير العمل البحثي ومشاريع نظم المعلومات.'
+      },
+      backend: {
+        kicker: 'BACKEND + APIS',
+        name: 'الخلفية وواجهات API',
+        icon: 'API',
+        description: 'العمل مع خدمات التطبيقات وطبقات البيانات وواجهات API وحدود التكامل التي تربط مكونات المنتج.',
+        tags: ['FastAPI', 'REST APIs', 'ASP.NET Core', 'NestJS', 'PostgreSQL', 'SQL', 'Firebase', 'Prisma', 'Swagger', 'Docker'],
+        context: 'أستخدمها في النماذج الأولية والتكامل ومشروع رقيب والعمل البرمجي القائم على الخدمات.'
+      },
+      iot: {
+        kicker: 'SMART SYSTEMS',
+        name: 'إنترنت الأشياء والأنظمة الذكية',
+        icon: 'IoT',
+        description: 'ربط الاستشعار والأجهزة والمنطق الطرفي والنماذج الذكية والبرمجيات الموجهة للمستخدم ضمن تجربة نظام ذكي متكاملة.',
+        tags: ['Arduino', 'Raspberry Pi', 'IoT', 'EEG / OpenBCI', 'Sensors', 'Edge AI'],
+        context: 'يمثل هذا المجال جزءًا أساسيًا من رقيب وتجارب الأنظمة الذكية المرتبطة بـ EEG وأجهزة إنترنت الأشياء.'
+      },
+      research: {
+        kicker: 'RESEARCH + IS',
+        name: 'البحث ونظم المعلومات',
+        icon: 'IS',
+        description: 'تنظيم الأسئلة والتجارب والأدلة والعمليات وتدفقات المعلومات بحيث يبقى العمل التقني دقيقًا ومفيدًا.',
+        tags: ['Research Design', 'Evaluation', 'Information Systems', 'Requirements', 'Documentation', 'Experiment Design', 'Human-centered Technology'],
+        context: 'أستخدمها في MIRAGE-MEM والعمل الأكاديمي ومشروع التخرج وتحليل المنتجات وتصميم الأنظمة.'
+      }
+    }
+  };
 
-  const cursorDot = document.getElementById('cursorDot');
-  const cursorAura = document.getElementById('cursorAura');
-  let mx = innerWidth / 2;
-  let my = innerHeight / 2;
-  let ax = mx;
-  let ay = my;
-
-  function setCursorVisible(visible){
-    cursorDot.classList.toggle('cursor-hidden', !visible);
-    cursorAura.classList.toggle('cursor-hidden', !visible);
-  }
-
-  window.addEventListener('pointermove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-    const edge = 7;
-    const inside = mx > edge && my > edge && mx < innerWidth - edge && my < innerHeight - edge;
-    setCursorVisible(inside);
-    cursorDot.style.left = mx + 'px';
-    cursorDot.style.top = my + 'px';
-  }, {passive:true});
-
-  document.documentElement.addEventListener('mouseleave', () => setCursorVisible(false));
-  document.documentElement.addEventListener('mouseenter', () => setCursorVisible(true));
-  window.addEventListener('blur', () => setCursorVisible(false));
-  window.addEventListener('focus', () => setCursorVisible(true));
-
-  function cursorLoop(){
-    ax += (mx - ax) * .16;
-    ay += (my - ay) * .16;
-    cursorAura.style.left = ax + 'px';
-    cursorAura.style.top = ay + 'px';
-    requestAnimationFrame(cursorLoop);
-  }
-  cursorLoop();
-
-  document.querySelectorAll('a,button,.project,.photo-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursorAura.classList.add('active'));
-    el.addEventListener('mouseleave', () => cursorAura.classList.remove('active'));
+  const englishText = {};
+  document.querySelectorAll('[data-i18n]').forEach((node) => {
+    englishText[node.dataset.i18n] = node.textContent.trim();
   });
 
-  const planet = document.getElementById('heroPlanet');
-  const scene = document.querySelector('.hero-scene');
-  if(scene && planet){
-    scene.addEventListener('pointermove', e => {
-      const r = scene.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5;
-      const y = (e.clientY - r.top) / r.height - .5;
-      planet.style.transform = `translate(-50%,-50%) rotateX(${y * -8}deg) rotateY(${x * 10}deg) translate3d(${x * 10}px,${y * 8}px,0)`;
+  const languageButton = document.getElementById('languageButton');
+  const menuButton = document.getElementById('menuButton');
+  const mobileNav = document.getElementById('mobileNav');
+  const topbar = document.getElementById('topbar');
+  const scrollMeter = document.querySelector('#scrollMeter span');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let currentLanguage = localStorage.getItem('sahar_portfolio_language') === 'ar' ? 'ar' : 'en';
+  let activeCapability = 'ai';
+
+  function setAria(language) {
+    document.querySelectorAll('[data-aria-key]').forEach((node) => {
+      const key = node.dataset.ariaKey;
+      const dictionary = ariaTranslations[language];
+      if (dictionary[key]) node.setAttribute('aria-label', dictionary[key]);
     });
-    scene.addEventListener('pointerleave', () => {
-      planet.style.transform = 'translate(-50%,-50%)';
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-label', ariaTranslations[language][isOpen ? 'closeMenu' : 'openMenu']);
+  }
+
+  function setImageAlts(language) {
+    document.querySelectorAll('[data-alt-key]').forEach((image) => {
+      const text = altTranslations[language][image.dataset.altKey];
+      if (text) image.alt = text;
     });
   }
 
-  document.querySelectorAll('.magnetic').forEach(el => {
-    el.addEventListener('pointermove', e => {
-      const r = el.getBoundingClientRect();
-      const x = e.clientX - (r.left + r.width / 2);
-      const y = e.clientY - (r.top + r.height / 2);
-      el.style.transform = `translate(${x * .08}px,${y * .08}px)`;
+  function setLanguage(language) {
+    currentLanguage = language;
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i18n]').forEach((node) => {
+      const key = node.dataset.i18n;
+      node.textContent = language === 'ar' ? (translations.ar[key] || englishText[key]) : englishText[key];
     });
-    el.addEventListener('pointerleave', () => {
-      el.style.transform = '';
+    languageButton.textContent = language === 'ar' ? 'English' : 'العربية';
+    languageButton.setAttribute('aria-label', language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
+    setAria(language);
+    setImageAlts(language);
+    renderCapability(activeCapability);
+    localStorage.setItem('sahar_portfolio_language', language);
+  }
+
+  languageButton.addEventListener('click', () => {
+    setLanguage(currentLanguage === 'en' ? 'ar' : 'en');
+  });
+
+  function toggleMenu(force) {
+    const willOpen = typeof force === 'boolean' ? force : menuButton.getAttribute('aria-expanded') !== 'true';
+    menuButton.setAttribute('aria-expanded', String(willOpen));
+    mobileNav.hidden = !willOpen;
+    menuButton.setAttribute('aria-label', ariaTranslations[currentLanguage][willOpen ? 'closeMenu' : 'openMenu']);
+  }
+
+  menuButton.addEventListener('click', () => toggleMenu());
+  mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => toggleMenu(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') toggleMenu(false);
+  });
+
+  function renderCapability(key) {
+    activeCapability = key;
+    const data = capabilityData[currentLanguage][key];
+    document.getElementById('capabilityKicker').textContent = data.kicker;
+    document.getElementById('capabilityName').textContent = data.name;
+    document.getElementById('capabilityDescription').textContent = data.description;
+    document.getElementById('capabilityContext').textContent = data.context;
+    document.querySelector('.panel-orbit span').textContent = data.icon;
+    const tags = document.getElementById('capabilityTags');
+    tags.replaceChildren(...data.tags.map((tag) => {
+      const span = document.createElement('span');
+      span.textContent = tag;
+      span.dir = 'ltr';
+      return span;
+    }));
+    document.querySelectorAll('[data-capability]').forEach((button) => {
+      button.setAttribute('aria-selected', String(button.dataset.capability === key));
+    });
+  }
+
+  document.querySelectorAll('[data-capability]').forEach((button) => {
+    button.addEventListener('click', () => renderCapability(button.dataset.capability));
+    button.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+      event.preventDefault();
+      const buttons = [...document.querySelectorAll('[data-capability]')];
+      const current = buttons.indexOf(button);
+      const delta = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1;
+      const next = buttons[(current + delta + buttons.length) % buttons.length];
+      next.focus();
+      renderCapability(next.dataset.capability);
     });
   });
 
-  const canvas = document.getElementById('cosmos');
-  const ctx = canvas.getContext('2d');
-  let stars = [];
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
+  document.querySelectorAll('.reveal').forEach((node) => revealObserver.observe(node));
 
-  function resizeCanvas(){
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    canvas.width = Math.floor(innerWidth * dpr);
-    canvas.height = Math.floor(innerHeight * dpr);
-    canvas.style.width = innerWidth + 'px';
-    canvas.style.height = innerHeight + 'px';
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    const count = Math.min(170, Math.floor((innerWidth * innerHeight) / 8500));
-    stars = Array.from({length:count}, () => ({
-      x:Math.random() * innerWidth,
-      y:Math.random() * innerHeight,
-      r:Math.random() * 1.25 + .18,
-      a:Math.random() * .65 + .15,
-      s:Math.random() * .045 + .01
+  const navLinks = [...document.querySelectorAll('.desktop-nav a')];
+  const trackedSections = navLinks
+    .map((link) => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    });
+  }, { rootMargin: '-32% 0px -58% 0px', threshold: 0 });
+  trackedSections.forEach((section) => navObserver.observe(section));
+
+  function updateScrollUI() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, window.scrollY / scrollable) : 0;
+    scrollMeter.style.height = `${progress * 100}%`;
+    topbar.classList.toggle('scrolled', window.scrollY > 24);
+  }
+  updateScrollUI();
+  window.addEventListener('scroll', updateScrollUI, { passive: true });
+
+  const heroVisual = document.getElementById('heroVisual');
+  if (heroVisual && window.matchMedia('(pointer:fine)').matches && !reducedMotion.matches) {
+    heroVisual.addEventListener('pointermove', (event) => {
+      const rect = heroVisual.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      heroVisual.style.setProperty('--rx', `${y * -5}deg`);
+      heroVisual.style.setProperty('--ry', `${x * 7}deg`);
+      heroVisual.style.setProperty('--tx', `${x * 7}px`);
+      heroVisual.style.setProperty('--ty', `${y * 5}px`);
+    });
+    heroVisual.addEventListener('pointerleave', () => {
+      heroVisual.style.setProperty('--rx', '0deg');
+      heroVisual.style.setProperty('--ry', '0deg');
+      heroVisual.style.setProperty('--tx', '0px');
+      heroVisual.style.setProperty('--ty', '0px');
+    });
+  }
+
+  const canvas = document.getElementById('signalField');
+  const context = canvas.getContext('2d', { alpha: true });
+  let points = [];
+  let animationFrame = 0;
+
+  function resizeCanvas() {
+    if (reducedMotion.matches) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.7);
+    canvas.width = Math.floor(window.innerWidth * dpr);
+    canvas.height = Math.floor(window.innerHeight * dpr);
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight}px`;
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const density = window.innerWidth < 700 ? 26 : 54;
+    points = Array.from({ length: density }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      r: Math.random() * 1.15 + 0.3,
+      vy: Math.random() * 0.045 + 0.012,
+      alpha: Math.random() * 0.34 + 0.08
     }));
   }
 
-  function drawCosmos(){
-    ctx.clearRect(0,0,innerWidth,innerHeight);
-    stars.forEach(star => {
-      star.y += star.s;
-      if(star.y > innerHeight + 4){
-        star.y = -4;
-        star.x = Math.random() * innerWidth;
+  function drawField() {
+    context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    for (const point of points) {
+      point.y += point.vy;
+      if (point.y > window.innerHeight + 5) {
+        point.y = -5;
+        point.x = Math.random() * window.innerWidth;
       }
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(220,235,255,${star.a})`;
-      ctx.arc(star.x,star.y,star.r,0,Math.PI * 2);
-      ctx.fill();
-    });
-
-    const gy = innerHeight * .86;
-    ctx.save();
-    ctx.globalAlpha = .15;
-    ctx.strokeStyle = '#66dfff';
-    ctx.lineWidth = 1;
-    for(let i = 0; i < 4; i++){
-      ctx.beginPath();
-      for(let x = -20; x <= innerWidth + 20; x += 16){
-        const y = gy + i * 22 + Math.sin((x + performance.now() * .014 + i * 80) / 100) * 7;
-        if(x === -20) ctx.moveTo(x,y);
-        else ctx.lineTo(x,y);
-      }
-      ctx.stroke();
+      context.beginPath();
+      context.fillStyle = `rgba(191, 225, 255, ${point.alpha})`;
+      context.arc(point.x, point.y, point.r, 0, Math.PI * 2);
+      context.fill();
     }
-    ctx.restore();
-    requestAnimationFrame(drawCosmos);
+    const horizon = window.innerHeight * 0.88;
+    context.save();
+    context.globalAlpha = 0.08;
+    context.strokeStyle = '#77e7ff';
+    context.lineWidth = 1;
+    const time = performance.now() * 0.00018;
+    for (let row = 0; row < 3; row += 1) {
+      context.beginPath();
+      for (let x = -20; x <= window.innerWidth + 20; x += 24) {
+        const y = horizon + row * 19 + Math.sin(x * 0.012 + time * 10 + row) * 5;
+        if (x === -20) context.moveTo(x, y);
+        else context.lineTo(x, y);
+      }
+      context.stroke();
+    }
+    context.restore();
+    animationFrame = requestAnimationFrame(drawField);
   }
 
-  resizeCanvas();
-  drawCosmos();
-  window.addEventListener('resize', resizeCanvas, {passive:true});
+  function startField() {
+    cancelAnimationFrame(animationFrame);
+    if (reducedMotion.matches) return;
+    resizeCanvas();
+    drawField();
+  }
 
-  document.getElementById('year').textContent = new Date().getFullYear();
+  reducedMotion.addEventListener?.('change', startField);
+  window.addEventListener('resize', resizeCanvas, { passive: true });
+  startField();
+
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+  setLanguage(currentLanguage);
 })();
